@@ -7,7 +7,7 @@ import About from "./pages/About";
 import Callforpapers from "./pages/Callforpapers";
 import Speakers from "./pages/Speakers";
 import Registration from "./pages/Registration";
-import AuthorGuidlines from "./pages/AuthorGuidlines"; // Import the AuthorGuidlines page
+import AuthorGuidlines from "./pages/AuthorGuidlines"; // Import the  AuthorGuidlines page
 import PublicationEthics from "./pages/PublicationEthics";
 import Keynotespeakers from "./pages/Keynotespeakers";
 import Contact from "./pages/Contact";
@@ -44,5 +44,3 @@ const app = () => {
 };
 
 export default app;
-
-

@@ -176,21 +176,21 @@ const Newsletter = () => {
                 <p className="text-sm text-gray-300">
                   You may withdraw your consent at any time.{" "}
                   <a
-                    href="#"
+                    href="/about"
                     className="text-violet-300 hover:text-violet-200 underline"
                   >
                     Learn more
                   </a>{" "}
                   on our{" "}
                   <a
-                    href="#"
+                    href="/about"
                     className="text-violet-300 hover:text-violet-200 underline"
                   >
                     Privacy Policy
                   </a>{" "}
                   and{" "}
                   <a
-                    href="#"
+                    href="/about"
                     className="text-violet-300 hover:text-violet-200 underline"
                   >
                     T&Cs
