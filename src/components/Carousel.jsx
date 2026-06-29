@@ -39,19 +39,19 @@ const Carousel = () => {
         <div
           className={`mb-12 ${isVisible ? "animate-fade-in-down" : "opacity-0"}`}
         >
-          <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-white drop-shadow-2xl">
+          <h1 className="font-display text-xl md:text-2xl lg:text-3xl font-semibold mb-4 text-white drop-shadow-2xl">
             1st International Conference on
           </h1>
-          <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight">
-            <span className="block text-white drop-shadow-2xl mb-3">
+          <h2 className="font-display text-2xl md:text-4xl lg:text-5xl font-black mb-6 leading-tight">
+            <span className="block text-white drop-shadow-2xl mb-2">
               Advances in Intelligent Computing
             </span>
             <span className="block text-white drop-shadow-2xl">
               and Communication Technology
             </span>
           </h2>
-          <div className="inline-block px-10 py-4 bg-gradient-to-r from-violet-600 to-indigo-700 rounded-full shadow-2xl mt-4">
-            <span className="font-display text-3xl md:text-4xl font-black text-white">
+          <div className="inline-block px-8 py-3 bg-gradient-to-r from-violet-600 to-indigo-700 rounded-full shadow-2xl mt-2">
+            <span className="font-display text-xl md:text-2xl font-black text-white">
               AICCT-2025
             </span>
           </div>
@@ -62,16 +62,16 @@ const Carousel = () => {
           className={`space-y-5 mb-12 ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}
           style={{ animationDelay: "0.3s" }}
         >
-          <p className="text-2xl md:text-3xl font-bold text-cyan-300 drop-shadow-lg">
+          <p className="text-lg md:text-xl font-bold text-cyan-300 drop-shadow-lg">
             📅 13-14 September 2025
           </p>
-          <p className="text-xl md:text-2xl font-semibold text-white drop-shadow-lg">
+          <p className="text-sm md:text-base font-semibold text-white drop-shadow-lg">
             Organized by
           </p>
-          <p className="text-xl md:text-2xl font-bold text-white drop-shadow-lg">
+          <p className="text-base md:text-lg font-bold text-white drop-shadow-lg">
             Department of Computer Science & Engineering
           </p>
-          <p className="text-lg md:text-xl font-semibold text-white drop-shadow-lg">
+          <p className="text-sm md:text-base font-semibold text-white drop-shadow-lg">
             United University, Prayagraj, India
           </p>
         </div>

@@ -42,11 +42,11 @@ const TopicsOfInterest = () => {
   return (
     <div className="w-2/3 m-auto p-6">
       <div className="flex flex-col justify-between items-center gap-4 mb-6">
-        <h2 className="text-4xl font-semibold">
+        <h2 className="text-2xl font-semibold">
           Topics of{" "}
           <span className="text-emerald-400 font-serif font-thin">Interest</span>
         </h2>
-        <p className="text-2xl font-semibold">
+        <p className="text-base font-semibold">
           The topics of interest include (but not limited to) the following:
         </p>
         <div>

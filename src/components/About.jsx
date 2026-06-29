@@ -21,8 +21,8 @@ const About = () => {
 
         {/* Right Side - Text */}
         <div className="md:w-full flex flex-col items-center md:items-start text-center md:text-left space-y-6">
-          <h2 className="text-3xl font-bold text-gray-800">About The AICCT</h2>
-          <p className="text-gray-600 text-justify">
+          <h2 className="text-xl font-bold text-gray-800">About The AICCT</h2>
+          <p className="text-gray-600 text-justify text-sm">
             AICCT-2025 is an international conference and the objective is to
             provide a platform for academicians, researchers, scholars, and
             students from various institutions, universities, and industries in
@@ -31,7 +31,7 @@ const About = () => {
             Language Processing, Smart Systems, Networks, and Communication
             Systems, Quantum computing, Blockchain and Cyber-Physical System.{" "}
           </p>
-          <p className="text-gray-600 text-justify">
+          <p className="text-gray-600 text-justify text-sm">
             We invite all students, research scholars, academicians, engineers,
             scientists, and industrialists working in the field of Intelligent
             Computing and Communications Techniques from all over the world. We
@@ -39,7 +39,7 @@ const About = () => {
             the upcoming conference AICCT-2025 to share their knowledge and
             experience among each other.
           </p>
-          <p className="text-blue-800 font-bold text-justify text-lg">
+          <p className="text-blue-800 font-bold text-justify text-sm">
             The paper will be published in conference Proceedings Series on
             Futuristic Intelligent and Smart Technologies (FIST), CRC Press,
             USA. <br /> The Proceedings volume will be sent for Indexing to

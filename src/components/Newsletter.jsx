@@ -58,14 +58,14 @@ const Newsletter = () => {
           <div
             className={`text-white ${isVisible ? "animate-slide-in-left" : "opacity-0"}`}
           >
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h2 className="font-display text-2xl md:text-3xl font-bold mb-4">
               Get access to{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 via-violet-300 to-indigo-300">
                 exclusive discounts
               </span>{" "}
               and announcements
             </h2>
-            <p className="text-xl text-gray-200 mb-8 leading-relaxed">
+            <p className="text-sm text-gray-200 mb-6 leading-relaxed">
               Join the AICCT network now for updates, speakers news, and early
               access to offers.
             </p>

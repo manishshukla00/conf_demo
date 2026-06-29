@@ -58,7 +58,7 @@ const ImportantDates = () => {
   return (
     <div className="w-full max-w-3xl mx-auto px-4">
       {/* Title Section */}
-      <h2 className="text-4xl font-bold text-center text-blue-800 mb-6 pt-4">
+      <h2 className="text-2xl font-bold text-center text-blue-800 mb-4 pt-4">
         Important{" "}
         <span className="text-emerald-500 font-serif font-thin"> Dates </span>
       </h2>
