@@ -43,7 +43,7 @@ const Timer = () => {
   }, []);
 
   return (
-    <div className="w-full px-4 py-6 flex flex-col items-center bg-gradient-to-br from-blue-200 via-indigo-300 to-indigo-400 rounded-lg shadow-lg">
+    <div className="w-full px-4 py-6 flex flex-col items-center bg-gradient-to-br from-blue-200 via-indigo-300 to-indigo-400 rounded-3xl shadow-lg">
       <h2 className="text-2xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-violet-500 to-emerald-400 mb-4 text-center drop-shadow-md">
         Countdown to AICCT 2025
       </h2>

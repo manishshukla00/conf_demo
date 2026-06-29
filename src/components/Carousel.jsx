@@ -123,7 +123,7 @@ const Carousel = () => {
             <a
               href="files/AICCTOfflineScheduleDay1.pdf"
               download
-              className="group w-full md:w-auto text-center bg-white bg-opacity-10 backdrop-blur-sm text-white font-semibold py-3 px-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105 border border-white border-opacity-20 flex items-center justify-center gap-2"
+              className="group w-full md:w-auto text-center bg-white bg-opacity-10 backdrop-blur-sm text-white font-semibold py-3 px-6 rounded-full hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105 border border-white border-opacity-20 flex items-center justify-center gap-2"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -144,7 +144,7 @@ const Carousel = () => {
             <a
               href="files/AICCTOnlineScheduleDay1-4.pdf"
               download
-              className="group w-full md:w-auto text-center bg-white bg-opacity-10 backdrop-blur-sm text-white font-semibold py-3 px-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105 border border-white border-opacity-20 flex items-center justify-center gap-2"
+              className="group w-full md:w-auto text-center bg-white bg-opacity-10 backdrop-blur-sm text-white font-semibold py-3 px-6 rounded-full hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105 border border-white border-opacity-20 flex items-center justify-center gap-2"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -165,7 +165,7 @@ const Carousel = () => {
             <a
               href="files/AICCTOnlineScheduleDay2.pdf"
               download
-              className="group w-full md:w-auto text-center bg-white bg-opacity-10 backdrop-blur-sm text-white font-semibold py-3 px-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105 border border-white border-opacity-20 flex items-center justify-center gap-2"
+              className="group w-full md:w-auto text-center bg-white bg-opacity-10 backdrop-blur-sm text-white font-semibold py-3 px-6 rounded-full hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105 border border-white border-opacity-20 flex items-center justify-center gap-2"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

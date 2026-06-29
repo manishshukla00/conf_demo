@@ -3,7 +3,7 @@ import React from "react";
 const Event = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 via-blue-200 to-indigo-300 p-6">
-      <div className="max-w-4xl mx-auto font-serif bg-blue-100 rounded-lg p-8">
+      <div className="max-w-4xl mx-auto font-serif bg-blue-100 rounded-3xl p-8">
         <h1 className="text-4xl font-extrabold text-center text-indigo-800 mb-6">
           About the Conference
         </h1>

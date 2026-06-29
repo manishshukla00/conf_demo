@@ -21,21 +21,10 @@
     @apply font-display font-bold tracking-tight;
   }
 
-  h1 {
-    @apply text-5xl md:text-6xl lg:text-7xl;
-  }
-
-  h2 {
-    @apply text-4xl md:text-5xl lg:text-6xl;
-  }
-
-  h3 {
-    @apply text-3xl md:text-4xl;
-  }
-
-  p {
-    @apply text-base md:text-lg leading-relaxed;
-  }
+  h1 { @apply text-5xl md:text-6xl lg:text-7xl; }
+  h2 { @apply text-4xl md:text-5xl lg:text-6xl; }
+  h3 { @apply text-3xl md:text-4xl; }
+  p  { @apply text-base md:text-lg leading-relaxed; }
 }
 
 @layer components {
@@ -99,25 +88,16 @@
 }
 
 /* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(to bottom, #3b82f6, #6366f1);
   border-radius: 5px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(to bottom, #2563eb, #4f46e5);
 }
 
-/* Smooth transitions for all interactive elements */
 a, button, input, textarea, select {
   @apply transition-all duration-300;
 }
-

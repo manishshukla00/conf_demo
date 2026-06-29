@@ -7,7 +7,7 @@ const ImportantDates = () => {
       date: (
         <span>
           <span className="line-through text-gray-400 mr-2">July 30, 2025</span>
-          <span className="font-bold text-red-600 bg-yellow-200 px-2 py-1 rounded shadow">
+          <span className="font-bold text-red-600 bg-yellow-200 px-2 py-1 rounded-full shadow">
             August 15, 2025
           </span>
         </span>
@@ -20,7 +20,7 @@ const ImportantDates = () => {
           <span className="line-through text-gray-400 mr-2">
             August 10, 2025
           </span>
-          <span className="font-bold text-red-600 bg-yellow-200 px-2 py-1 rounded shadow">
+          <span className="font-bold text-red-600 bg-yellow-200 px-2 py-1 rounded-full shadow">
             August 30, 2025
           </span>
         </span>
@@ -33,7 +33,7 @@ const ImportantDates = () => {
           <span className="line-through text-gray-400 mr-2">
             August 20, 2025
           </span>
-          <span className="font-bold text-red-600 bg-yellow-200 px-2 py-1 rounded shadow">
+          <span className="font-bold text-red-600 bg-yellow-200 px-2 py-1 rounded-full shadow">
             August 30, 2025
           </span>
         </span>
@@ -63,9 +63,9 @@ const ImportantDates = () => {
         <span className="text-emerald-500 font-serif font-thin"> Dates </span>
       </h2>
       {/* Card Section */}
-      <div className="bg-gradient-to-r from-blue-500 via-purple-600 to-violet-500 rounded-lg shadow-lg py-6">
-        <div className="bg-gradient-to-r from-blue-500 via-violet-500 to-emerald-400 p-1 rounded-lg shadow-lg">
-          <table className="w-full bg-white text-gray-800 rounded-lg overflow-hidden text-base sm:text-lg md:text-xl">
+      <div className="bg-gradient-to-r from-blue-500 via-purple-600 to-violet-500 rounded-3xl shadow-lg py-6">
+        <div className="bg-gradient-to-r from-blue-500 via-violet-500 to-emerald-400 p-1 rounded-3xl shadow-lg">
+          <table className="w-full bg-white text-gray-800 rounded-3xl overflow-hidden text-base sm:text-lg md:text-xl">
             <tbody>
               {dates.map((item, index) => (
                 <tr

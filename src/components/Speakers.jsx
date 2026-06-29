@@ -89,12 +89,12 @@ const Speakers = () => {
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               {/* Card */}
-              <div className="relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+              <div className="relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
                 {/* Gradient Border Effect */}
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${speaker.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
                 ></div>
-                <div className="relative bg-white m-[2px] rounded-2xl overflow-hidden">
+                <div className="relative bg-white m-[2px] rounded-3xl overflow-hidden">
                   {/* Image Container */}
                   <div className="relative h-80 overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
                     <img

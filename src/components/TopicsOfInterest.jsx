@@ -50,10 +50,10 @@ const TopicsOfInterest = () => {
           The topics of interest include (but not limited to) the following:
         </p>
         <div>
-          <button className="bg-emerald-600 hover:bg-emerald-800 text-white px-4 py-2 rounded mr-2">
+          <button className="bg-emerald-600 hover:bg-emerald-800 text-white px-4 py-2 rounded-full mr-2">
             Author Instructions
           </button>
-          <button className="bg-emerald-600 hover:bg-emerald-800 text-white px-4 py-2 rounded">
+          <button className="bg-emerald-600 hover:bg-emerald-800 text-white px-4 py-2 rounded-full">
             Submit Your Article
           </button>
         </div>
@@ -67,7 +67,7 @@ const TopicsOfInterest = () => {
             {topics.map((item, index) => (
               <div
                 key={index}
-                className="bg-blue-200 p-4 rounded shadow hover:bg-blue-300 transition"
+                className="bg-blue-200 p-4 rounded-2xl shadow hover:bg-blue-300 transition"
               >
                 {item.track}
               </div>
@@ -82,7 +82,7 @@ const TopicsOfInterest = () => {
             {specialSessions.map((session, index) => (
               <div
                 key={index}
-                className="bg-blue-200 p-4 rounded shadow hover:bg-blue-300 transition"
+                className="bg-blue-200 p-4 rounded-2xl shadow hover:bg-blue-300 transition"
               >
                 <p className="font-bold">{session.track}</p>
                 <ul className="list-disc ml-5 mt-2 text-sm">

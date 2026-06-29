@@ -61,7 +61,7 @@ const About = () => {
       <div className="flex justify-center mt-8">
         <div className="flex items-center justify-center flex-wrap gap-4">
           <a href="https://cmt3.research.microsoft.com/AICCT2025/Submission/Index">
-            <button className="px-6 py-2 bg-emerald-600 text-white rounded-lg shadow-md hover:bg-emerald-800">
+            <button className="px-6 py-2 bg-emerald-600 text-white rounded-full shadow-md hover:bg-emerald-800">
               SUBMIT ARTICLE
             </button>{" "}
             {""}
@@ -72,7 +72,7 @@ const About = () => {
             className="text-blue-600 underline hover:text-blue-800"
           >
             {" "}
-            <button className="px-6 py-2 bg-emerald-600 text-white rounded-lg shadow-md hover:bg-emerald-800">
+            <button className="px-6 py-2 bg-emerald-600 text-white rounded-full shadow-md hover:bg-emerald-800">
               DOC TEMPLATE
             </button>{" "}
           </a>
