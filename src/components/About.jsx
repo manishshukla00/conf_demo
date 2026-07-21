@@ -21,25 +21,25 @@ const About = () => {
 
         {/* Right Side - Text */}
         <div className="md:w-full flex flex-col items-center md:items-start text-center md:text-left space-y-6">
-          <h2 className="text-xl font-bold text-gray-800">About The AICCT</h2>
-          <p className="text-gray-600 text-justify text-sm">
-            AICCT-2025 is an international conference and the objective is to
+          <h2 className="text-3xl font-bold text-gray-800">About The AISCDS</h2>
+          <p className="text-gray-600 text-justify">
+            AISCDS-2027 is an international conference and the objective is to
             provide a platform for academicians, researchers, scholars, and
             students from various institutions, universities, and industries in
             India and abroad to exchange their research and innovative ideas in
             the field of Artificial Intelligence, Machine learning, Natural
             Language Processing, Smart Systems, Networks, and Communication
-            Systems, Quantum computing, Blockchain and Cyber-Physical System.{" "}
+            Systems, Quantum computing, Blockchain and Cyber-Physical System.
           </p>
-          <p className="text-gray-600 text-justify text-sm">
+          <p className="text-gray-600 text-justify">
             We invite all students, research scholars, academicians, engineers,
             scientists, and industrialists working in the field of Intelligent
             Computing and Communications Techniques from all over the world. We
             warmly welcome all the authors to submit their original research in
-            the upcoming conference AICCT-2025 to share their knowledge and
+            the upcoming conference AISCDS-2027 to share their knowledge and
             experience among each other.
           </p>
-          <p className="text-blue-800 font-bold text-justify text-sm">
+          {/* <p className="text-blue-800 font-bold text-justify text-lg">
             The paper will be published in conference Proceedings Series on
             Futuristic Intelligent and Smart Technologies (FIST), CRC Press,
             USA. <br /> The Proceedings volume will be sent for Indexing to
@@ -53,7 +53,7 @@ const About = () => {
             of Thermal Engineering (ESCI, Scopus) <br /> 4. Sigma Journal of
             Engineering and Natural Sciences (ESCI) (No APC for any Journal){" "}
             <br /> 5. Sensors, MDPI journal (SCIE, Scopus) (APC Applicable)
-          </p>
+          </p> */}
         </div>
       </div>
 

@@ -2,45 +2,48 @@ import React from "react";
 
 const ImportantDates = () => {
   const dates = [
-    {
-      event: "Paper Submission Deadline:",
-      date: (
-        <span>
-          <span className="line-through text-gray-400 mr-2">July 30, 2025</span>
-          <span className="font-bold text-red-600 bg-yellow-200 px-2 py-1 rounded-full shadow">
-            August 15, 2025
-          </span>
-        </span>
-      ),
-    },
-    {
-      event: "Notification of Acceptance:",
-      date: (
-        <span>
-          <span className="line-through text-gray-400 mr-2">
-            August 10, 2025
-          </span>
-          <span className="font-bold text-red-600 bg-yellow-200 px-2 py-1 rounded-full shadow">
-            August 30, 2025
-          </span>
-        </span>
-      ),
-    },
-    {
-      event: "Final Paper Submission:",
-      date: (
-        <span>
-          <span className="line-through text-gray-400 mr-2">
-            August 20, 2025
-          </span>
-          <span className="font-bold text-red-600 bg-yellow-200 px-2 py-1 rounded-full shadow">
-            August 30, 2025
-          </span>
-        </span>
-      ),
-    },
-    { event: "Early Bird Registration:", date: "August 30, 2025" },
-    { event: "Conference Date", date: "September 13-14, 2025" },
+    // {
+    //   event: "Paper Submission Deadline:",
+    //   date: (
+    //     <span>
+    //       <span className="line-through text-gray-400 mr-2">July 30, 2025</span>
+    //       <span className="font-bold text-red-600 bg-yellow-200 px-2 py-1 rounded-full shadow">
+    //         August 15, 2025
+    //       </span>
+    //     </span>
+    //   ),
+    // },
+    // {
+    //   event: "Notification of Acceptance:",
+    //   date: (
+    //     <span>
+    //       {/* <span className="line-through text-gray-400 mr-2">
+    //         August 10, 2025
+    //       </span> */}
+    //       <span className="font-bold text-red-600 bg-yellow-200 px-2 py-1 rounded-full shadow">
+    //         August 30, 2025
+    //       </span>
+    //     </span>
+    //   ),
+    // },
+    // {
+    //   event: "Final Paper Submission:",
+    //   date: (
+    //     <span>
+    //       {/* <span className="line-through text-gray-400 mr-2">
+    //         August 20, 2025
+    //       </span> */}
+    //       <span className="font-bold text-red-600 bg-yellow-200 px-2 py-1 rounded-full shadow">
+    //         August 30, 2025
+    //       </span>
+    //     </span>
+    //   ),
+    // },
+    { event: "Paper Submission Deadline:", date: "September 30, 2026" },
+    { event: "Notification of Acceptance:", date: "October 30, 2026" },
+    { event: "Final Paper Submission:", date: "November 30, 2026" },  
+    { event: "Early Bird Registration:", date: "December 30, 2026" },
+    { event: "Conference Date", date: "January 08-09, 2027" },
     {
       event: "Paper Submission Guidelines",
       date: (
@@ -58,7 +61,7 @@ const ImportantDates = () => {
   return (
     <div className="w-full max-w-3xl mx-auto px-4">
       {/* Title Section */}
-      <h2 className="text-2xl font-bold text-center text-blue-800 mb-4 pt-4">
+      <h2 className="text-4xl font-bold text-center text-blue-800 mb-6 pt-4">
         Important{" "}
         <span className="text-emerald-500 font-serif font-thin"> Dates </span>
       </h2>

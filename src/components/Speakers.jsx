@@ -29,15 +29,15 @@ const Speakers = () => {
 
   const speakers = [
     {
-      name: "Prof. Rajeev Srivastava",
-      image: "/images/RajeevPhoto1.jpeg",
+      name: "Prof. Siddhartha Bhattacharyya",
+      image: "https://i1.rgstatic.net/ii/profile.image/564921299464192-1511699141118_Q128/Siddhartha-Bhattacharyya-2.jpg",
       designation: "Director",
       department: "IIIT Ranchi",
       gradient: "from-blue-500 to-cyan-500",
     },
     {
-      name: "Prof. Dr. Sanjay Mishra",
-      image: "/images/sanjay-misra.png",
+      name: "Prof. Jyoti Sekhar Banerjee",
+      image: "https://i1.rgstatic.net/ii/profile.image/886099685675010-1588274036653_Q512/Jyoti-Sekhar-Banerjee.jpg",
       designation: "Senior Scientist",
       department: "Institute for Energy Technology, Halden",
       gradient: "from-blue-500 to-violet-500",
@@ -69,13 +69,13 @@ const Speakers = () => {
         <div
           className={`text-center mb-16 ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}
         >
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="font-display text-5xl md:text-6xl font-bold mb-6">
             They've spoken at{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600">
               our events
             </span>
           </h2>
-          <p className="text-base text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             World-renowned experts and thought leaders sharing their insights
           </p>
         </div>
@@ -111,7 +111,7 @@ const Speakers = () => {
 
                   {/* Content */}
                   <div className="p-6">
-                    <h3 className="font-display text-lg font-bold text-gray-900 mb-1 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-indigo-600 transition-all duration-300">
+                    <h3 className="font-display text-2xl font-bold text-gray-900 mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-indigo-600 transition-all duration-300">
                       {speaker.name}
                     </h3>
                     <p className="text-sm font-semibold text-gray-600 mb-1">
@@ -132,7 +132,7 @@ const Speakers = () => {
           className={`text-center ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}
           style={{ animationDelay: "0.8s" }}
         >
-          <button className="px-8 py-3 bg-gradient-to-r from-indigo-900 via-indigo-900 to-violet-900 text-white font-display font-semibold text-sm rounded-full hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative overflow-hidden group">
+          <button className="px-10 py-4 bg-gradient-to-r from-indigo-900 via-indigo-900 to-violet-900 text-white font-display font-semibold text-lg rounded-full hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative overflow-hidden group">
             <span className="relative z-10">See all speakers</span>
             <div className="absolute inset-0 bg-gradient-to-r from-pink-900 via-indigo-900 to-indigo-900 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </button>
