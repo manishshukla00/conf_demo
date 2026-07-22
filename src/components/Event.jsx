@@ -24,13 +24,13 @@ const Event = () => {
           With this thought in mind, Department of Computer Science and Engineering,
            United University, Prayagraj, Uttar Pradesh (India) has planned to bring together
             the Intelligent Computing research community through 1st  International 
-            Conference on intelligent computing and communication technologies (AICCT-2025),
-             Sepetember 12-13, 2025.
+            Conference on intelligent computing and communication technologies (AISCDS 2027),
+             Sepetember 12-13, 2027.
         </p>
         <p className="text-lg text-gray-800 leading-relaxed">
-          AICCT-2025 is being organized with the objective of bringing together researchers,
+          AISCDS 2027 is being organized with the objective of bringing together researchers,
            developers, and practitioners from academia and industry working in the area of
-            intelligent computing and communication technologies. AICCT-2025 aims to provide 
+            intelligent computing and communication technologies. AISCDS 2027 aims to provide 
             an international and interdisciplinary forum for the Computer Science and
              Technology research community to explore the frontier of science and technology
               in intelligent computing, emerging technologies, data science, machine learning,

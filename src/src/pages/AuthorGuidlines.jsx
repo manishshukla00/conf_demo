@@ -12,8 +12,9 @@ const AuthorGuidlines = () => {
             </h2>
             <p className="text-lg text-gray-800 mb-4">
               We are excited to welcome authors to submit their technical papers
-              for the International Conference on Advances in Intelligent
-              Computing and Communication Technology (AICCT), 2K25 using
+              for the 2nd International Conference on
+              Artificial Intelligence, Smart Computing
+              and Data Science (AISCDS), 2K27 using
               Microsoft CMT. Please cohere to the instructions outlined below to
               ensure a smooth submission process:
             </p>
@@ -23,7 +24,7 @@ const AuthorGuidlines = () => {
             </h3>
             <p className="text-lg text-gray-800 mb-4">
               To submit your paper, access the Conference Management Toolkit
-              (Microsoft CMT) via the provided{" "}
+              (Microsoft CMT) via the provided
               <Link
                 className="text-blue-600 underline hover:text-blue-800"
                 to={
@@ -216,7 +217,7 @@ const AuthorGuidlines = () => {
               Mode of Presentation:
             </h3>
             <p className="text-lg text-gray-800 mb-4">
-              AICCT 2K25 will be held in hybrid mode, where authors shall
+              AISCDS-2027 will be held in hybrid mode, where authors shall
               present their papers either in physical mode at the conference
               venue or online as per their preference and convenience. The
               proceedings and certificates will be sent to the email ids of the
@@ -224,7 +225,7 @@ const AuthorGuidlines = () => {
               and indexing will remain unchanged.
             </p>
             <p className="text-lg text-gray-800 mb-4">
-              <span className="font-bold">PPT Template for AICCT:</span>
+              <span className="font-bold">PPT Template for AISCDS:</span>
               <a
                 href="/files/ppt-template.pptx"
                 download

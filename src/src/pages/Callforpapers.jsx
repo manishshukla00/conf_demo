@@ -81,7 +81,7 @@ const Callforpapers = () => {
           Call for Papers
         </h1>
         <p className="text-lg text-gray-800 leading-relaxed mb-8 text-center">
-          AICCT-2025 is soliciting original, previously unpublished, and
+          AISCDS-2027 is soliciting original, previously unpublished, and
           high-quality research papers addressing research challenges and
           advances in the tracks mentioned below. The topics of the conference
           include, but are not limited to:

@@ -8,7 +8,7 @@ const Footer = () => (
         <div>
           <h3 className="text-xl font-bold mb-4">About AICCT</h3>
           <p className="text-gray-400 text-sm leading-relaxed text-justify">
-            AICCT 2025 is an international conference that brings together researchers, academicians,
+            AISCDS 2027 is an international conference that brings together researchers, academicians,
             and industry professionals to discuss the latest advancements in intelligent computing,
             communication, and technology.
           </p>

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 const Timer = () => {
   const calculateTimeLeft = () => {
     const now = new Date();
-    const targetDate = new Date("September 13, 2025 00:00:00 GMT+00:00"); // Target date: July 12, 2025
+    const targetDate = new Date("September 08, 2027 00:00:00 GMT+00:00"); // Target date: September 08, 2027
     const difference = targetDate - now;
 
     if (difference > 0) {
@@ -45,7 +45,7 @@ const Timer = () => {
   return (
     <div className="w-full px-4 py-6 flex flex-col items-center bg-gradient-to-br from-blue-200 via-indigo-300 to-indigo-400 rounded-3xl shadow-lg">
       <h2 className="text-2xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-violet-500 to-emerald-400 mb-4 text-center drop-shadow-md">
-        Countdown to AICCT 2025
+        Countdown to AISCDS 2027
       </h2>
       <div className="flex flex-wrap justify-center gap-6 text-center">
         {/* Days */}

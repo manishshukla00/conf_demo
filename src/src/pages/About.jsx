@@ -89,7 +89,7 @@ const About = () => {
             </span>
           </h1>
           <p className={`text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed transition-all duration-700 delay-100 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-            1st International Conference on Advances in Intelligent Computing and Communication Technology —
+            2<sup>nd</sup> International Conference on Advances in Intelligent Computing and Communication Technology —
             bringing together the brightest minds from academia and industry worldwide.
           </p>
           <div className="mt-6 flex justify-center gap-2">

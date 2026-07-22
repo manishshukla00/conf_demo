@@ -39,11 +39,11 @@ const ImportantDates = () => {
     //     </span>
     //   ),
     // },
-    { event: "Paper Submission Deadline:", date: "September 30, 2026" },
-    { event: "Notification of Acceptance:", date: "October 30, 2026" },
-    { event: "Final Paper Submission:", date: "November 30, 2026" },  
-    { event: "Early Bird Registration:", date: "December 30, 2026" },
-    { event: "Conference Date", date: "January 08-09, 2027" },
+    { event: "Paper Submission Deadline:", date: "Sep 30, 2026" },
+    { event: "Notification of Acceptance:", date: "Oct 30, 2026" },
+    { event: "Final Paper Submission:", date: "Nov 30, 2026" },  
+    { event: "Early Bird Registration:", date: "Decr 30, 2026" },
+    { event: "Conference Date", date: "Jan 08-09, 2027" },
     {
       event: "Paper Submission Guidelines",
       date: (
@@ -52,7 +52,7 @@ const ImportantDates = () => {
           download
           className="text-blue-600 underline hover:text-blue-800"
         >
-          MS Template Download{" "}
+          MS Template Download 
         </a>
       ),
     },
@@ -62,7 +62,7 @@ const ImportantDates = () => {
     <div className="w-full max-w-3xl mx-auto px-4">
       {/* Title Section */}
       <h2 className="text-4xl font-bold text-center text-blue-800 mb-6 pt-4">
-        Important{" "}
+        Important
         <span className="text-emerald-500 font-serif font-thin"> Dates </span>
       </h2>
       {/* Card Section */}
