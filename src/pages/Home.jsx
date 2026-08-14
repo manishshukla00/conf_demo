@@ -14,7 +14,7 @@ const Home = () => {
       <ImportantDates />
       <About />
       <Speakers />
-      <Newsletter />
+      {/* <Newsletter /> */}
     </div>
   );
 };

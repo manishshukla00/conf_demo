@@ -56,7 +56,7 @@ const Footer = () => (
       </div>
 
       <div className="mt-8 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
-        &copy; 2025 AICCT | Developed by Dr. Sanjeev Gupta. All Rights Reserved.
+        &copy; AISCDS-2027 | Developed by Dr. Sanjeev Gupta. All Rights Reserved.
       </div>
     </div>
   </footer>

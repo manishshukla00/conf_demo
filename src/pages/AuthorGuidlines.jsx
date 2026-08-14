@@ -12,8 +12,9 @@ const AuthorGuidlines = () => {
             </h2>
             <p className="text-lg text-gray-800 mb-4">
               We are excited to welcome authors to submit their technical papers
-              for the International Conference on Advances in Intelligent
-              Computing and Communication Technology (AICCT), 2K25 using
+              for the International Conference on
+Artificial Intelligence, Smart Computing
+and Data Science(AISCDS), 2k27 using
               Microsoft CMT. Please cohere to the instructions outlined below to
               ensure a smooth submission process:
             </p>
@@ -23,7 +24,7 @@ const AuthorGuidlines = () => {
             </h3>
             <p className="text-lg text-gray-800 mb-4">
               To submit your paper, access the Conference Management Toolkit
-              (Microsoft CMT) via the provided{" "}
+              (Microsoft CMT) via the provided
               <Link
                 className="text-blue-600 underline hover:text-blue-800"
                 to={
@@ -132,17 +133,17 @@ const AuthorGuidlines = () => {
                 keywords, and its introduction should summarize the
                 contributions of the paper. The similarity index for a submitted
                 paper should be as per stipulation of publication house. It may
-                vary over time to time.{" "}
+                vary over time to time.
               </li>
 
               <li>
                 The length of the paper should be minimum 4 pages and maximum 5
                 pages including metadata. The metadata should be in the first
-                page of the paper.{" "}
+                page of the paper.
               </li>
               <li>
                 The authors are encouraged to prepare their papers as per the
-                given guidelines.{" "}
+                given guidelines.
               </li>
               <li>
                 Submitted papers must be in PDF format and submitted
@@ -188,10 +189,10 @@ const AuthorGuidlines = () => {
                 submitted article. Any attempt to reveal author details and
                 affiliation at the time of initial submission will lead to
                 rejection summarily of the paper without further processing. The
-                review will be fully Double- Blind in nature.{" "}
+                review will be fully Double- Blind in nature.
               </li>
               <li>
-                {" "}
+                
                 All papers that conform to submission guidelines will be
                 evaluated based on originality, technical and/or research
                 content/depth, correctness, relevance to conference,
@@ -216,7 +217,7 @@ const AuthorGuidlines = () => {
               Mode of Presentation:
             </h3>
             <p className="text-lg text-gray-800 mb-4">
-              AICCT 2K25 will be held in hybrid mode, where authors shall
+              AISCDS-2027 will be held in hybrid mode, where authors shall
               present their papers either in physical mode at the conference
               venue or online as per their preference and convenience. The
               proceedings and certificates will be sent to the email ids of the
@@ -224,7 +225,7 @@ const AuthorGuidlines = () => {
               and indexing will remain unchanged.
             </p>
             <p className="text-lg text-gray-800 mb-4">
-              <span className="font-bold">PPT Template for AICCT:</span>
+              <span className="font-bold">PPT Template for AISCDS-2027:</span>
               <a
                 href="/files/ppt-template.pptx"
                 download
@@ -246,12 +247,12 @@ const AuthorGuidlines = () => {
               Microsoft CMT for Review:
             </h3>
             <p className="text-lg text-gray-800">
-              The{" "}
+              The
               <a
                 href="/"
                 className="text-blue-600 underline hover:text-blue-800"
               >
-                Microsoft CMT service{" "}
+                Microsoft CMT service
               </a>
               will be used for managing the peer-reviewing process for this
               conference. This service is provided for free by Microsoft and
@@ -267,7 +268,7 @@ const AuthorGuidlines = () => {
                 href="/"
                 className="text-blue-600 underline hover:text-blue-800"
               >
-                {" "}
+                
                 contact us
               </a>
               .

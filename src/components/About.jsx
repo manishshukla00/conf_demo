@@ -12,8 +12,7 @@ const About = () => {
             className="w-40 h-40 object-contain transform transition-transform duration-300 hover:scale-110 hover:shadow-lg"
           />
           <img
-            height={40}
-            src="images/crc.png"
+            src="/images/springer.jpeg"
             alt="Taylor & Francis Logo"
             className="w-40 object-contain transform transition-transform duration-300 hover:scale-110 hover:shadow-lg"
           />
@@ -47,11 +46,11 @@ const About = () => {
             (Extended Version) will be submitted for Scopus/SCIE/SCI Journal
             Publication. <br /> <br /> Special Issue:- Selected Papers (Extended
             version) will be published in <br /> 1. Recent Advances in Computer
-            Science and Communications, Bentham Science Publishers (Scopus){" "}
+            Science and Communications, Bentham Science Publishers (Scopus)
             <br /> 2. International Journal of Sensors, Wireless Communications
             and Control, Bentham Science Publishers (Scopus) <br /> 3. Journal
             of Thermal Engineering (ESCI, Scopus) <br /> 4. Sigma Journal of
-            Engineering and Natural Sciences (ESCI) (No APC for any Journal){" "}
+            Engineering and Natural Sciences (ESCI) (No APC for any Journal)
             <br /> 5. Sensors, MDPI journal (SCIE, Scopus) (APC Applicable)
           </p> */}
         </div>
@@ -63,7 +62,7 @@ const About = () => {
           <a href="https://cmt3.research.microsoft.com/AICCT2025/Submission/Index">
             <button className="px-6 py-2 bg-emerald-600 text-white rounded-full shadow-md hover:bg-emerald-800">
               SUBMIT ARTICLE
-            </button>{" "}
+            </button>
             {""}
           </a>
           <a
@@ -71,10 +70,10 @@ const About = () => {
             download
             className="text-blue-600 underline hover:text-blue-800"
           >
-            {" "}
+            
             <button className="px-6 py-2 bg-emerald-600 text-white rounded-full shadow-md hover:bg-emerald-800">
               DOC TEMPLATE
-            </button>{" "}
+            </button>
           </a>
         </div>
       </div>

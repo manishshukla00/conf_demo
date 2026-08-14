@@ -53,7 +53,7 @@ const whyAttend = [
 ];
 
 const publications = [
-  "CRC Press (FIST Series) — Scopus Indexing",
+  "Springer — Lecture Notes in Networks and Systems (LNNS)",
   "Recent Advances in Computer Science & Communications, Bentham Science (Scopus)",
   "International Journal of Sensors, Wireless Comm. & Control, Bentham (Scopus)",
   "Journal of Thermal Engineering (ESCI, Scopus)",
@@ -80,17 +80,18 @@ const About = () => {
 
         <div className="relative z-10 max-w-4xl mx-auto">
           <span className="inline-block px-4 py-1 bg-indigo-500 bg-opacity-30 text-indigo-200 text-sm font-semibold rounded-full border border-indigo-400 border-opacity-40 mb-6 tracking-widest uppercase">
-            AICCT 2025
+            AISCDS-2027
           </span>
           <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             About{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-400 to-violet-400">
-              AICCT 2025
+              AISCDS-2027
             </span>
           </h1>
           <p className={`text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed transition-all duration-700 delay-100 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-            1st International Conference on Advances in Intelligent Computing and Communication Technology —
-            bringing together the brightest minds from academia and industry worldwide.
+               2<sup>nd</sup> International Conference on
+Artificial Intelligence, Smart Computing
+and Data Science
           </p>
           <div className="mt-6 flex justify-center gap-2">
             <div className="h-1 w-12 rounded-full bg-cyan-400"></div>
@@ -122,23 +123,28 @@ const About = () => {
               <img src="/images/logo.png" alt="AICCT Logo" className="w-full h-full object-contain" />
             </div>
             <div className="w-32 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-2xl flex items-center justify-center overflow-hidden p-3">
-              <img src="/images/crc.png" alt="CRC Press" className="w-full object-contain" />
+              <img src="/images/springer.jpeg" alt="Springer" className="w-full object-contain" />
             </div>
           </div>
           {/* Text */}
           <div className="flex-1 space-y-5">
             <h2 className="text-2xl font-bold text-white">About The Conference</h2>
             <p className="text-slate-300 leading-relaxed">
-              AICCT-2025 is an international conference with the objective of providing a platform for academicians,
-              researchers, scholars, and students from various institutions, universities, and industries in India
-              and abroad to exchange research and innovative ideas in Artificial Intelligence, Machine Learning,
-              Natural Language Processing, Smart Systems, Networks, Communication Systems, Quantum Computing,
-              Blockchain and Cyber-Physical Systems.
+               AISCDS-2027 is an international conference and the objective is to
+            provide a platform for academicians, researchers, scholars, and
+            students from various institutions, universities, and industries in
+            India and abroad to exchange their research and innovative ideas in
+            the field of Artificial Intelligence, Machine learning, Natural
+            Language Processing, Smart Systems, Networks, and Communication
+            Systems, Quantum computing, Blockchain and Cyber-Physical System.
             </p>
             <p className="text-slate-300 leading-relaxed">
-              We invite students, research scholars, academicians, engineers, scientists, and industrialists
-              working in the field of Intelligent Computing and Communications Techniques from all over the world
-              to submit their original research and share knowledge at AICCT-2025.
+             We invite all students, research scholars, academicians, engineers,
+            scientists, and industrialists working in the field of Intelligent
+            Computing and Communications Techniques from all over the world. We
+            warmly welcome all the authors to submit their original research in
+            the upcoming conference AISCDS-2027 to share their knowledge and
+            experience among each other.
             </p>
             <div className="flex flex-wrap gap-3 pt-2">
               <a href="https://cmt3.research.microsoft.com/AICCT2025/Submission/Index" target="_blank" rel="noopener noreferrer"
@@ -196,7 +202,7 @@ const About = () => {
             Key{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-cyan-400">Topics</span>
           </h2>
-          <p className="text-slate-400">Research areas covered at AICCT 2025</p>
+          <p className="text-slate-400">Research areas covered at AISCDS-2027</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {highlights.map((h, i) => (
@@ -257,7 +263,7 @@ const About = () => {
       {/* ── CTA ── */}
       <div className="max-w-3xl mx-auto px-4 pb-20 text-center">
         <div className="bg-gradient-to-br from-blue-600 to-violet-700 rounded-3xl p-10 shadow-2xl">
-          <h2 className="text-2xl sm:text-3xl font-black text-white mb-4">Ready to Join AICCT 2025?</h2>
+          <h2 className="text-2xl sm:text-3xl font-black text-white mb-4">Ready to Join AISCDS-2027?</h2>
           <p className="text-blue-100 mb-8 leading-relaxed">Submit your research and be part of the global conversation shaping the future of intelligent computing.</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a href="https://cmt3.research.microsoft.com/AICCT2025/Submission/Index" target="_blank" rel="noopener noreferrer"
