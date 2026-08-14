@@ -70,10 +70,10 @@ const Speakers = () => {
           className={`text-center mb-16 ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}
         >
           <h2 className="font-display text-5xl md:text-6xl font-bold mb-6">
-            They've spoken at{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600">
+            Keynote <span className="text-blue-600">Speakers</span>
+            {/* <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600">
               our events
-            </span>
+            </span> */}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             World-renowned experts and thought leaders sharing their insights
