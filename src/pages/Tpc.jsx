@@ -125,7 +125,7 @@ const Tpc = () => {
       {/* Hero Header */}
       <div className="text-center mb-12">
         <span className="inline-block px-4 py-1 bg-indigo-500 bg-opacity-30 text-indigo-200 text-sm font-semibold rounded-full border border-indigo-400 border-opacity-40 mb-4 tracking-widest uppercase">
-          AICCT 2025
+          AISCDS 2027
         </span>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-4 leading-tight">
           Technical Program{" "}

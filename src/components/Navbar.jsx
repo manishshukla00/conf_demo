@@ -72,10 +72,10 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className="hidden md:flex flex-shrink-0 items-center gap-3 ml-4">
+        {/* <div className="hidden md:flex flex-shrink-0 items-center gap-3 ml-4">
           <Link to="/registration" className="px-5 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-full hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-md">Book Tickets</Link>
           <Link to="/contact" className="px-5 py-2 bg-teal-500 text-white text-sm font-semibold rounded-full hover:bg-teal-600 transition-all duration-300 transform hover:scale-105 shadow-md">Exhibit</Link>
-        </div>
+        </div> */}
 
         <div className="md:hidden ml-auto">
           <button onClick={toggleMenu} className="text-gray-900 text-3xl focus:outline-none hover:text-blue-600 transition-colors p-2" aria-label="Toggle menu">
@@ -111,10 +111,10 @@ const Navbar = () => {
           {[{ to: "/registration", label: "Registration" }, { to: "/contact", label: "Contact" }].map(({ to, label }) => (
             <Link key={to} to={to} onClick={closeMobileMenu} className="text-2xl font-bold hover:text-blue-300 transition-colors py-2">{label}</Link>
           ))}
-          <div className="flex gap-4 mt-4">
+          {/* <div className="flex gap-4 mt-4">
             <Link to="/registration" onClick={closeMobileMenu} className="px-6 py-2 bg-indigo-600 text-white font-semibold rounded-full hover:bg-indigo-700 transition-all">Book Tickets</Link>
             <Link to="/contact" onClick={closeMobileMenu} className="px-6 py-2 bg-teal-500 text-white font-semibold rounded-full hover:bg-teal-600 transition-all">Exhibit</Link>
-          </div>
+          </div> */}
         </div>
       )}
     </div>

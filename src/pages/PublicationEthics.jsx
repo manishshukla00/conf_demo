@@ -12,32 +12,32 @@ const PublicationEthics = () => {
             </h2>
             <p className="text-lg text-gray-800 mb-4">
               The International Conference on Innovations in Computing,
-              Communication, and Technology (AICCT) 2025 is dedicated to
+              Communication, and Technology (AISCDS) 2027 is dedicated to
               maintaining the highest standards of publication ethics and will
               stop publication malpractices at all costs. Among other things,
               the Editorial Board is in charge of stopping publication
-              misconduct. Plagiarism in any form is not tolerated by the AICCT
-              2025, and unethical behavior is unacceptable. Authors who have
+              misconduct. Plagiarism in any form is not tolerated by the AISCDS
+              2027, and unethical behavior is unacceptable. Authors who have
               contributed articles confirm that the content of the manuscript is
               original. Additionally, the submission by the authors indicates
               that the work has not been previously published in any language,
               in whole or in part, and that it is not presently being considered
               for publication anywhere else. According to the Code of Conduct
-              for editors, authors, and reviewers within the AICCT 2025 are
+              for editors, authors, and reviewers within the AISCDS 2027 are
               expected to uphold the highest standards of good publication
               practice and take full responsibility for carrying out their
               assigned tasks. The author(s) of an article surrenders copyright
               to United University,Prayagraj, India upon acceptance for
               publication; nevertheless, authors are still responsible for the
-              content of their published works. As part of the AICCT 2025
+              content of their published works. As part of the AISCDS 2027
               guidelines as written on the conference website{}
               <a
-                href="https://www.aicct.in"
+                href="https://www.AISCDS.in"
                 className="text-blue-600 underline hover:text-blue-800"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                https://www.aicct.in
+                https://www.AISCDS.in
               </a>
               .
             </p>

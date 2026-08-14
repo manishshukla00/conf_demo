@@ -11,10 +11,10 @@ const Event = () => {
           Human tendency has always remained dynamic and has led to various revolutions for mankind. Nineteenth century was the era of machine revolution, twentieth century was the era of electronic revolution but the 21st century is time of Intelligent Computing and Communication Technology (ICCT) revolution. The peculiar thing with ICCT revolution is that it is globalized while earlier revolutions belonged only to some countries. ICCT is touching each and every walk of life. Now every field of life such as industrial, rural development, medical, economical, even social field are looking forward for help from CIT for their survival and growth.
         </p>
         <p className="text-lg text-gray-800 leading-relaxed mb-6">
-          AICCT in itself consists of wide range of possibilities which are increasing
+          AISCDS in itself consists of wide range of possibilities which are increasing
            exponentially day by day. To cope up with increasing global need for high
             performance, more efficiency, and optimized output; advance computing technologies
-             are the growing research area in the field of AICCT. Although various high
+             are the growing research area in the field of AISCDS. Although various high
               performance models such as cluster computing, Grid computing and cloud computing 
               have been proposed but these models are still looking for big hands in research.
                So, Intelligent Computing has been one of the most promising research areas 

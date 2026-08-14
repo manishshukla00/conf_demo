@@ -38,9 +38,8 @@ const About = () => {
             the upcoming conference AISCDS-2027 to share their knowledge and
             experience among each other.
           </p>
-          {/* <p className="text-blue-800 font-bold text-justify text-lg">
-            The paper will be published in conference Proceedings Series on
-            Futuristic Intelligent and Smart Technologies (FIST), CRC Press,
+          <p className="text-blue-800 font-bold text-justify text-lg">
+            The paper will be published in conference Proceedings Series Lecture Notes in Networks and Systems (LNNS), Springer,
             USA. <br /> The Proceedings volume will be sent for Indexing to
             Scopus for Inclusion after publication. <br /> Selected papers
             (Extended Version) will be submitted for Scopus/SCIE/SCI Journal
@@ -52,7 +51,7 @@ const About = () => {
             of Thermal Engineering (ESCI, Scopus) <br /> 4. Sigma Journal of
             Engineering and Natural Sciences (ESCI) (No APC for any Journal)
             <br /> 5. Sensors, MDPI journal (SCIE, Scopus) (APC Applicable)
-          </p> */}
+          </p>
         </div>
       </div>
 
@@ -63,7 +62,6 @@ const About = () => {
             <button className="px-6 py-2 bg-emerald-600 text-white rounded-full shadow-md hover:bg-emerald-800">
               SUBMIT ARTICLE
             </button>
-            {""}
           </a>
           <a
             href="/files/Word_Sample_template_8.25 x11_column.docx"
