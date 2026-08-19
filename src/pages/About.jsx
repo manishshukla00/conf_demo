@@ -120,7 +120,7 @@ const About = () => {
           {/* Logo */}
           <div className="flex flex-col items-center gap-5 flex-shrink-0">
             <div className="w-32 h-32 rounded-full bg-white bg-opacity-10 border border-white border-opacity-20 flex items-center justify-center overflow-hidden p-2">
-              <img src="/images/logo.png" alt="AISCDS Logo" className="w-full h-full object-contain" />
+              <img src="/images/springer.jpeg" alt="AISCDS Logo" className="w-full h-full object-contain" />
             </div>
             <div className="w-32 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-2xl flex items-center justify-center overflow-hidden p-3">
               <img src="/images/book.png" alt="Springer" className="w-full object-contain" />

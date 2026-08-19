@@ -40,19 +40,19 @@ const Carousel = () => {
           className={`mb-12 ${isVisible ? "animate-fade-in-down" : "opacity-0"}`}
         >
           <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-white drop-shadow-2xl">
-           2<sup>nd</sup> International Conference on
+           <sup></sup> International Conference on 
           </h1>
           <h2 className="font-display text-2xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight">
             <span className="font-display text-3xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-white drop-shadow-2xl">
-              Artificial Intelligence, Smart Computing
+              Computational Intelligence & Systems Engineering 
             </span>
             <span className="font-display text-3xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-white drop-shadow-2xl">
-               <br />and Data Science
+               <br />
             </span>
           </h2>
           <div className="inline-block px-10 py-4 bg-gradient-to-r from-violet-600 to-indigo-700 rounded-full shadow-2xl mt-4">
             <span className="font-display text-3xl md:text-4xl font-black text-white">
-              (AISCDS 2027)
+              (ConCISE-2027)
             </span>
           </div>
         </div>

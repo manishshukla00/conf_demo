@@ -25,13 +25,13 @@ const Navbar = () => {
       <nav className="w-full max-w-screen-xl mx-auto flex items-center px-4 sm:px-6 lg:px-8 py-3">
         <div className="flex-shrink-0">
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden shadow-md group-hover:shadow-lg transition-all duration-300 transform group-hover:scale-105">
-              <img src="/images/logo.png" alt="AISCDS Logo" loading="lazy" className="w-full h-full object-cover" />
+            <div className="h-60 w-60 sm:w-16 sm:h-16 overflow-hidden shadow-md group-hover:shadow-lg transition-all duration-300 transform group-hover:scale-105">
+              <img src="/images/springer.jpeg" alt="AISCDS Logo" loading="lazy" className="w-full h-full object-cover" />
             </div>
-            <div className="hidden sm:block">
+            {/* <div className="hidden sm:block">
               <span className="font-display font-bold text-xl text-gray-900">AISCDS</span>
               <p className="text-xs text-gray-500">2027</p>
-            </div>
+            </div> */}
           </Link>
         </div>
 
