@@ -48,7 +48,7 @@ const Contact = () => {
       {/* Header */}
       <div className="text-center mb-12">
         <span className="inline-block px-4 py-1 bg-blue-100 text-blue-700 text-sm font-semibold rounded-full border border-blue-200 mb-4 tracking-widest uppercase">
-          AISCDS 2027
+          ConCISE 2027
         </span>
         <h1 className="text-4xl sm:text-5xl font-black text-gray-900 mb-3">
           Contact

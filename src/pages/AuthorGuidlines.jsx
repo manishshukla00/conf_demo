@@ -14,7 +14,7 @@ const AuthorGuidlines = () => {
               We are excited to welcome authors to submit their technical papers
               for the International Conference on
 Artificial Intelligence, Smart Computing
-and Data Science(AISCDS), 2k27 using
+and Data Science(ConCISE), 2k27 using
               Microsoft CMT. Please cohere to the instructions outlined below to
               ensure a smooth submission process:
             </p>
@@ -217,7 +217,7 @@ and Data Science(AISCDS), 2k27 using
               Mode of Presentation:
             </h3>
             <p className="text-lg text-gray-800 mb-4">
-              AISCDS-2027 will be held in hybrid mode, where authors shall
+              ConCISE-2027 will be held in hybrid mode, where authors shall
               present their papers either in physical mode at the conference
               venue or online as per their preference and convenience. The
               proceedings and certificates will be sent to the email ids of the
@@ -225,7 +225,7 @@ and Data Science(AISCDS), 2k27 using
               and indexing will remain unchanged.
             </p>
             <p className="text-lg text-gray-800 mb-4">
-              <span className="font-bold">PPT Template for AISCDS-2027:</span>
+              <span className="font-bold">PPT Template for ConCISE-2027:</span>
               <a
                 href="/files/ppt-template.pptx"
                 download

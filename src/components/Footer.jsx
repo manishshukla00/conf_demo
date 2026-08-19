@@ -6,9 +6,9 @@ const Footer = () => (
     <div className="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div>
-          <h3 className="text-xl font-bold mb-4">About AISCDS</h3>
+          <h3 className="text-xl font-bold mb-4">About ConCISE</h3>
           <p className="text-gray-400 text-sm leading-relaxed text-justify">
-            AISCDS 2027 is an international conference that brings together researchers, academicians,
+            ConCISE 2027 is an international conference that brings together researchers, academicians,
             and industry professionals to discuss the latest advancements in intelligent computing,
             communication, and technology.
           </p>
@@ -56,7 +56,7 @@ const Footer = () => (
       </div>
 
       <div className="mt-8 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
-        &copy; AISCDS-2027 | Developed by United University Prayagraj. All Rights Reserved.
+        &copy; ConCISE-2027 | Developed by United University Prayagraj. All Rights Reserved.
       </div>
     </div>
   </footer>

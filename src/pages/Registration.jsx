@@ -26,7 +26,7 @@ const Registration = () => {
       {/* Header */}
       <div className="text-center mb-12">
         <span className="inline-block px-4 py-1 bg-blue-100 text-blue-700 text-sm font-semibold rounded-full border border-blue-200 mb-4 tracking-widest uppercase">
-          AISCDS 2027
+          ConCISE 2027
         </span>
         <h1 className="text-4xl sm:text-5xl font-black text-gray-900 mb-3">
           Registration{" "}
@@ -35,7 +35,7 @@ const Registration = () => {
           </span>
         </h1>
         <p className="text-gray-500 text-lg max-w-xl mx-auto">
-          Complete your registration before the deadline to secure your spot at AISCDS 2027.
+          Complete your registration before the deadline to secure your spot at ConCISE 2027.
         </p>
         <div className="mt-5 flex justify-center gap-2">
           <div className="h-1 w-12 rounded-full bg-blue-500"></div>
@@ -131,7 +131,7 @@ const Registration = () => {
             <button onClick={() => setShowPopup(false)} className="absolute top-4 right-5 text-gray-400 hover:text-gray-700 text-2xl font-bold transition-colors">×</button>
             <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center text-3xl mx-auto mb-5">🔒</div>
             <h2 className="text-2xl font-black text-gray-900 mb-3">Registration Closed</h2>
-            <p className="text-gray-500 leading-relaxed mb-6">Thank you for your interest. Registration for AISCDS 2027 is now closed.</p>
+            <p className="text-gray-500 leading-relaxed mb-6">Thank you for your interest. Registration for ConCISE 2027 is now closed.</p>
             <button
               onClick={() => setShowPopup(false)}
               className="w-full py-3 bg-gradient-to-r from-blue-600 to-violet-600 text-white font-bold rounded-full hover:scale-105 transition-all duration-300 shadow-lg"

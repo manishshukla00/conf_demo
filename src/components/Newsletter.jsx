@@ -66,7 +66,7 @@ const Newsletter = () => {
               and announcements
             </h2>
             <p className="text-xl text-gray-200 mb-8 leading-relaxed">
-              Join the AISCDS network now for updates, speakers news, and early
+              Join the ConCISE network now for updates, speakers news, and early
               access to offers.
             </p>
 

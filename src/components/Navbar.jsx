@@ -26,10 +26,10 @@ const Navbar = () => {
         <div className="flex-shrink-0">
           <Link to="/" className="flex items-center gap-3 group">
             <div className="h-60 w-60 sm:w-16 sm:h-16 overflow-hidden shadow-md group-hover:shadow-lg transition-all duration-300 transform group-hover:scale-105">
-              <img src="/images/springer.jpeg" alt="AISCDS Logo" loading="lazy" className="w-full h-full object-cover" />
+              <img src="/images/springer.jpeg" alt="ConCISE Logo" loading="lazy" className="w-full h-full object-cover" />
             </div>
             {/* <div className="hidden sm:block">
-              <span className="font-display font-bold text-xl text-gray-900">AISCDS</span>
+              <span className="font-display font-bold text-xl text-gray-900">ConCISE</span>
               <p className="text-xs text-gray-500">2027</p>
             </div> */}
           </Link>
