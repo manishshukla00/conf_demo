@@ -83,15 +83,15 @@ const About = () => {
             AISCDS-2027
           </span>
           <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-            About{" "}
+            About
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-400 to-violet-400">
               AISCDS-2027
             </span>
           </h1>
           <p className={`text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed transition-all duration-700 delay-100 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
                2<sup>nd</sup> International Conference on
-Artificial Intelligence, Smart Computing
-and Data Science
+               Artificial Intelligence, Smart Computing
+               and Data Science
           </p>
           <div className="mt-6 flex justify-center gap-2">
             <div className="h-1 w-12 rounded-full bg-cyan-400"></div>
@@ -123,7 +123,7 @@ and Data Science
               <img src="/images/logo.png" alt="AISCDS Logo" className="w-full h-full object-contain" />
             </div>
             <div className="w-32 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-2xl flex items-center justify-center overflow-hidden p-3">
-              <img src="/images/springer.jpeg" alt="Springer" className="w-full object-contain" />
+              <img src="/images/book.png" alt="Springer" className="w-full object-contain" />
             </div>
           </div>
           {/* Text */}
