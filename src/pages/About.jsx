@@ -80,17 +80,17 @@ const About = () => {
 
         <div className="relative z-10 max-w-4xl mx-auto">
           <span className="inline-block px-4 py-1 bg-indigo-500 bg-opacity-30 text-indigo-200 text-sm font-semibold rounded-full border border-indigo-400 border-opacity-40 mb-6 tracking-widest uppercase">
-            AICCT 2025
+            ConCISE-2027
           </span>
           <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             About{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-400 to-violet-400">
-              AICCT 2025
+              ConCISE-2027
             </span>
           </h1>
           <p className={`text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed transition-all duration-700 delay-100 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-            2<sup>nd</sup> International Conference on Advances in Intelligent Computing and Communication Technology —
-            bringing together the brightest minds from academia and industry worldwide.
+           International Conference on
+Computational Intelligence & Systems Engineering
           </p>
           <div className="mt-6 flex justify-center gap-2">
             <div className="h-1 w-12 rounded-full bg-cyan-400"></div>
@@ -117,29 +117,25 @@ const About = () => {
       <div className="max-w-5xl mx-auto px-4 pb-16">
         <div className="bg-white bg-opacity-5 border border-white border-opacity-10 rounded-3xl p-8 md:p-12 flex flex-col lg:flex-row gap-10 items-start">
           {/* Logo */}
-          <div className="flex flex-col items-center gap-5 flex-shrink-0">
-            <div className="w-32 h-32 rounded-full bg-white bg-opacity-10 border border-white border-opacity-20 flex items-center justify-center overflow-hidden p-2">
-              <img src="/images/logo.png" alt="AICCT Logo" className="w-full h-full object-contain" />
+          <div className="flex flex-col items-center pt-4 gap-2 flex-shrink-0">
+            <div className="w-32 h-32 flex items-center justify-center overflow-hidden p-2">
+              <img src="/images/springer.jpeg" alt="AICCT Logo" className="w-full h-full object-contain" />
             </div>
-            <div className="w-32 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-2xl flex items-center justify-center overflow-hidden p-3">
-              <img src="/images/crc.png" alt="CRC Press" className="w-full object-contain" />
+            <div className="w-32 flex items-center justify-center overflow-hidden p-3">
+              <img src="/images/book.png" alt="CRC Press" className="w-full object-contain" />
             </div>
           </div>
           {/* Text */}
           <div className="flex-1 space-y-5">
             <h2 className="text-2xl font-bold text-white">About The Conference</h2>
-            <p className="text-slate-300 leading-relaxed">
-              AICCT-2025 is an international conference with the objective of providing a platform for academicians,
-              researchers, scholars, and students from various institutions, universities, and industries in India
-              and abroad to exchange research and innovative ideas in Artificial Intelligence, Machine Learning,
-              Natural Language Processing, Smart Systems, Networks, Communication Systems, Quantum Computing,
-              Blockchain and Cyber-Physical Systems.
+            <p className="text-slate-300 text-justify leading-relaxed">
+              ConCISE 2027 is a two-day International Conference that brings together researchers, academicians, scientists, industry professionals, engineers, policymakers, and students from across the globe to share knowledge, present innovative research, and explore emerging technological trends. The conference provides a common platform for research, collaboration, and knowledge exchange in key areas including Computational Intelligence, Artificial Intelligence, Smart Computing, Cognitive Computing, Systems Engineering, IoT, Generative AI, Cloud Computing, Machine Learning, Deep Learning, and related emerging technologies. Through keynote talks, technical sessions, paper presentations, and expert interactions, ConCISE 2027 aims to foster interdisciplinary collaboration and academia–industry partnerships, while highlighting innovative solutions for a smarter, sustainable, and connected future.
             </p>
-            <p className="text-slate-300 leading-relaxed">
+            {/* <p className="text-slate-300 leading-relaxed">
               We invite students, research scholars, academicians, engineers, scientists, and industrialists
               working in the field of Intelligent Computing and Communications Techniques from all over the world
-              to submit their original research and share knowledge at AICCT-2025.
-            </p>
+              to submit their original research and share knowledge at ConCISE-2027.
+            </p> */}
             <div className="flex flex-wrap gap-3 pt-2">
               <a href="https://cmt3.research.microsoft.com/AICCT2025/Submission/Index" target="_blank" rel="noopener noreferrer"
                 className="px-6 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:scale-105 transition-all duration-300 shadow-lg text-sm">
@@ -190,13 +186,13 @@ const About = () => {
       </div>
 
       {/* ── Topics ── */}
-      <div className="max-w-5xl mx-auto px-4 pb-16">
+      {/* <div className="max-w-5xl mx-auto px-4 pb-16">
         <div className="text-center mb-10">
           <h2 className="text-3xl sm:text-4xl font-black text-white mb-3">
             Key{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-cyan-400">Topics</span>
           </h2>
-          <p className="text-slate-400">Research areas covered at AICCT 2025</p>
+          <p className="text-slate-400">Research areas covered at ConCISE-2027</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {highlights.map((h, i) => (
@@ -210,7 +206,7 @@ const About = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* ── Why Attend ── */}
       <div className="max-w-5xl mx-auto px-4 pb-16">
@@ -231,7 +227,7 @@ const About = () => {
       </div>
 
       {/* ── Publications ── */}
-      <div className="max-w-5xl mx-auto px-4 pb-16">
+      {/* <div className="max-w-5xl mx-auto px-4 pb-16">
         <div className="bg-gradient-to-br from-indigo-900 to-blue-900 border border-indigo-700 border-opacity-50 rounded-3xl p-8 md:p-12">
           <div className="text-center mb-8">
             <span className="text-3xl mb-3 block">📚</span>
@@ -252,12 +248,12 @@ const About = () => {
           </div>
           <p className="text-center text-slate-500 text-xs mt-6">* No APC for journals 1–4 · APC applicable for Sensors, MDPI</p>
         </div>
-      </div>
+      </div> */}
 
       {/* ── CTA ── */}
       <div className="max-w-3xl mx-auto px-4 pb-20 text-center">
         <div className="bg-gradient-to-br from-blue-600 to-violet-700 rounded-3xl p-10 shadow-2xl">
-          <h2 className="text-2xl sm:text-3xl font-black text-white mb-4">Ready to Join AICCT 2025?</h2>
+          <h2 className="text-2xl sm:text-3xl font-black text-white mb-4">Ready to Join ConCISE-2027?</h2>
           <p className="text-blue-100 mb-8 leading-relaxed">Submit your research and be part of the global conversation shaping the future of intelligent computing.</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a href="https://cmt3.research.microsoft.com/AICCT2025/Submission/Index" target="_blank" rel="noopener noreferrer"

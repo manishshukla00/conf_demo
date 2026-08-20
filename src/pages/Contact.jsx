@@ -7,8 +7,8 @@ const Contact = () => {
         </svg>
       ),
       label: "Email",
-      value: "aicct@uniteduniversity.edu.in",
-      href: "mailto:aicct@uniteduniversity.edu.in",
+      value: "sanjeev.kumar@uniteduniversity.edu.in",
+      href: "mailto:sanjeev.kumar@uniteduniversity.edu.in",
       color: "from-blue-500 to-cyan-400",
       bg: "bg-blue-50",
       border: "border-blue-100",
@@ -48,7 +48,7 @@ const Contact = () => {
       {/* Header */}
       <div className="text-center mb-12">
         <span className="inline-block px-4 py-1 bg-blue-100 text-blue-700 text-sm font-semibold rounded-full border border-blue-200 mb-4 tracking-widest uppercase">
-          AICCT 2025
+          ConCISE-2027
         </span>
         <h1 className="text-4xl sm:text-5xl font-black text-gray-900 mb-3">
           Contact{" "}

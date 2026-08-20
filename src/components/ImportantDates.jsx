@@ -48,12 +48,13 @@ const ImportantDates = () => {
       event: "Paper Submission Guidelines",
       date: (
         <a
-          href="/files/Word_Sample_template_8.25 x11_column.docx"
-          download
-          className="text-blue-600 underline hover:text-blue-800"
-        >
-          MS Template Download 
-        </a>
+  href="https://drive.google.com/file/d/15iPQvMuTVWg51UFVYIU14jWz-wQFsGNZ/view?usp=drive_link"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+>
+  MS Template Download
+</a>
       ),
     },
   ];

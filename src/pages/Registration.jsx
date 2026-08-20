@@ -26,7 +26,7 @@ const Registration = () => {
       {/* Header */}
       <div className="text-center mb-12">
         <span className="inline-block px-4 py-1 bg-blue-100 text-blue-700 text-sm font-semibold rounded-full border border-blue-200 mb-4 tracking-widest uppercase">
-          AICCT 2025
+          ConCISE-2027
         </span>
         <h1 className="text-4xl sm:text-5xl font-black text-gray-900 mb-3">
           Registration{" "}
@@ -35,7 +35,7 @@ const Registration = () => {
           </span>
         </h1>
         <p className="text-gray-500 text-lg max-w-xl mx-auto">
-          Complete your registration before the deadline to secure your spot at AICCT 2025.
+          Complete your registration before the deadline to secure your spot at ConCISE-2027.
         </p>
         <div className="mt-5 flex justify-center gap-2">
           <div className="h-1 w-12 rounded-full bg-blue-500"></div>
@@ -52,7 +52,7 @@ const Registration = () => {
             <div className="text-4xl">📅</div>
             <div>
               <p className="text-blue-200 text-sm font-semibold uppercase tracking-wider">Last Date of Registration</p>
-              <p className="text-2xl font-black">August 25, 2025</p>
+              <p className="text-2xl font-black">April 30, 2027</p>
             </div>
           </div>
           <button
@@ -82,7 +82,7 @@ const Registration = () => {
           </div>
 
           {/* Note */}
-          <div className="mt-5 bg-amber-50 border border-amber-200 rounded-3xl p-5 flex items-start gap-4">
+          {/* <div className="mt-5 bg-amber-50 border border-amber-200 rounded-3xl p-5 flex items-start gap-4">
             <div className="w-10 h-10 rounded-2xl bg-amber-100 flex items-center justify-center text-xl flex-shrink-0">⚠️</div>
             <div>
               <p className="font-bold text-amber-800 text-sm mb-1">Important Note</p>
@@ -91,7 +91,7 @@ const Registration = () => {
                 <strong>₹1,000/page</strong> for Indian authors and <strong>$15/page</strong> for international authors.
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Account Details */}
@@ -119,7 +119,7 @@ const Registration = () => {
           >
             Proceed to Register
           </button>
-          <p className="text-gray-400 text-sm mt-3">Registration deadline: August 25, 2025</p>
+          <p className="text-gray-400 text-sm mt-3">Registration deadline: April 30, 2027</p>
         </div>
 
       </div>
@@ -131,7 +131,7 @@ const Registration = () => {
             <button onClick={() => setShowPopup(false)} className="absolute top-4 right-5 text-gray-400 hover:text-gray-700 text-2xl font-bold transition-colors">×</button>
             <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center text-3xl mx-auto mb-5">🔒</div>
             <h2 className="text-2xl font-black text-gray-900 mb-3">Registration Closed</h2>
-            <p className="text-gray-500 leading-relaxed mb-6">Thank you for your interest. Registration for AICCT 2025 is now closed.</p>
+            <p className="text-gray-500 leading-relaxed mb-6">Thank you for your interest. Registration for ConCISE-2027 is now closed.</p>
             <button
               onClick={() => setShowPopup(false)}
               className="w-full py-3 bg-gradient-to-r from-blue-600 to-violet-600 text-white font-bold rounded-full hover:scale-105 transition-all duration-300 shadow-lg"
