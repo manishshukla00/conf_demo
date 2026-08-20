@@ -39,11 +39,11 @@ const ImportantDates = () => {
     //     </span>
     //   ),
     // },
-    { event: "Paper Submission Deadline:", date: "Sep 30, 2026" },
-    { event: "Notification of Acceptance:", date: "Oct 30, 2026" },
-    { event: "Final Paper Submission:", date: "Nov 30, 2026" },  
-    { event: "Early Bird Registration:", date: "Decr 30, 2026" },
-    { event: "Conference Date", date: "Jan 08-09, 2027" },
+    { event: "Paper Submission Deadline:", date: "Feb 30, 2027" },
+    { event: "Notification of Acceptance:", date: "Mar 30, 2027" },
+    { event: "Final Paper Submission:", date: "Apr 30, 2027" },  
+    { event: "Early Bird Registration:", date: "Apr 30, 2027" },
+    { event: "Conference Date", date: "May 07-08, 2027" },
     {
       event: "Paper Submission Guidelines",
       date: (

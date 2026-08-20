@@ -63,7 +63,7 @@ const Carousel = () => {
           style={{ animationDelay: "0.3s" }}
         >
           <p className="text-2xl md:text-3xl font-bold text-cyan-300 drop-shadow-lg">
-            📅 08-09 January 2027
+            📅 07-08 May 2027
           </p>
           <p className="text-xl md:text-2xl font-semibold text-white drop-shadow-lg">
             Organized by
