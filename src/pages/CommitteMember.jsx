@@ -190,7 +190,7 @@ const CommitteMember = () => {
       {/* Hero Header */}
       <div className="text-center mb-14">
         <span className="inline-block px-4 py-1 bg-indigo-500 bg-opacity-30 text-indigo-200 text-sm font-semibold rounded-full border border-indigo-400 border-opacity-40 mb-4 tracking-widest uppercase">
-          AICCT 2025
+          ConCISE 2027
         </span>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-4 leading-tight">
           Conference{" "}
@@ -199,7 +199,7 @@ const CommitteMember = () => {
           </span>
         </h1>
         <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-          Meet the esteemed members contributing to the success of AICCT-2025.
+          Meet the esteemed members contributing to the success of ConCISE-2027.
         </p>
         <div className="mt-6 flex justify-center gap-2">
           <div className="h-1 w-12 rounded-full bg-cyan-400"></div>
