@@ -90,23 +90,86 @@ const gradients = [
 ];
 
 const getInitials = (name) => {
-  const clean = name.replace(/^(Dr\.|Prof\.|Prof\(Dr\)|Mr\.|Mrs\.|Ms\.)\s*/i, "").trim();
+  const clean = name
+    .replace(/^(Dr\.|Prof\.|Prof\(Dr\)|Mr\.|Mrs\.|Ms\.)\s*/i, "")
+    .trim();
+
   const parts = clean.split(" ");
-  return parts.slice(0, 2).map((p) => p[0]).join("").toUpperCase();
+
+  return parts
+    .slice(0, 2)
+    .map((p) => p[0])
+    .join("")
+    .toUpperCase();
 };
 
 const getCountryTag = (affiliation) => {
-  if (/\bUSA\b/i.test(affiliation)) return { label: "USA", color: "bg-blue-100 text-blue-700" };
-  if (/India/i.test(affiliation)) return { label: "India", color: "bg-orange-100 text-orange-700" };
-  if (/Nigeria/i.test(affiliation)) return { label: "Nigeria", color: "bg-green-100 text-green-700" };
-  if (/Uzbekistan/i.test(affiliation)) return { label: "Uzbekistan", color: "bg-teal-100 text-teal-700" };
-  if (/Romania/i.test(affiliation)) return { label: "Romania", color: "bg-red-100 text-red-700" };
-  if (/Uganda/i.test(affiliation)) return { label: "Uganda", color: "bg-yellow-100 text-yellow-700" };
-  if (/Algeria/i.test(affiliation)) return { label: "Algeria", color: "bg-emerald-100 text-emerald-700" };
-  if (/Vietnam/i.test(affiliation)) return { label: "Vietnam", color: "bg-rose-100 text-rose-700" };
-  if (/Ghana/i.test(affiliation)) return { label: "Ghana", color: "bg-amber-100 text-amber-700" };
-  if (/Dubai/i.test(affiliation)) return { label: "UAE", color: "bg-sky-100 text-sky-700" };
-  if (/Croatia|Czech/i.test(affiliation)) return { label: "Europe", color: "bg-purple-100 text-purple-700" };
+  if (/\bUSA\b/i.test(affiliation))
+    return {
+      label: "USA",
+      color: "bg-blue-100 text-blue-700",
+    };
+
+  if (/India/i.test(affiliation))
+    return {
+      label: "India",
+      color: "bg-orange-100 text-orange-700",
+    };
+
+  if (/Nigeria/i.test(affiliation))
+    return {
+      label: "Nigeria",
+      color: "bg-green-100 text-green-700",
+    };
+
+  if (/Uzbekistan/i.test(affiliation))
+    return {
+      label: "Uzbekistan",
+      color: "bg-teal-100 text-teal-700",
+    };
+
+  if (/Romania/i.test(affiliation))
+    return {
+      label: "Romania",
+      color: "bg-red-100 text-red-700",
+    };
+
+  if (/Uganda/i.test(affiliation))
+    return {
+      label: "Uganda",
+      color: "bg-yellow-100 text-yellow-700",
+    };
+
+  if (/Algeria/i.test(affiliation))
+    return {
+      label: "Algeria",
+      color: "bg-emerald-100 text-emerald-700",
+    };
+
+  if (/Vietnam/i.test(affiliation))
+    return {
+      label: "Vietnam",
+      color: "bg-rose-100 text-rose-700",
+    };
+
+  if (/Ghana/i.test(affiliation))
+    return {
+      label: "Ghana",
+      color: "bg-amber-100 text-amber-700",
+    };
+
+  if (/Dubai/i.test(affiliation))
+    return {
+      label: "UAE",
+      color: "bg-sky-100 text-sky-700",
+    };
+
+  if (/Croatia|Czech/i.test(affiliation))
+    return {
+      label: "Europe",
+      color: "bg-purple-100 text-purple-700",
+    };
+
   return null;
 };
 
@@ -120,109 +183,243 @@ const Tpc = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-950 to-blue-900 pt-24 pb-16 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 pt-24 pb-16 px-4">
 
-      {/* Hero Header */}
+      {/* ================= HEADER ================= */}
       <div className="text-center mb-12">
-        <span className="inline-block px-4 py-1 bg-indigo-500 bg-opacity-30 text-indigo-200 text-sm font-semibold rounded-full border border-indigo-400 border-opacity-40 mb-4 tracking-widest uppercase">
+
+        {/* Conference Badge */}
+        <span className="inline-block px-4 py-1 bg-blue-100 text-blue-700 text-sm font-semibold rounded-full border border-blue-200 mb-4 tracking-widest uppercase">
           ConCISE 2027
         </span>
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-4 leading-tight">
+
+        {/* Main Heading */}
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 mb-3 leading-tight">
           Technical Program{" "}
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-400 to-violet-400">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-violet-600">
             Committee
           </span>
         </h1>
-        <p className="text-lg text-slate-300 max-w-2xl mx-auto mb-2">
+
+        {/* Subtitle */}
+        <p className="text-gray-500 text-lg max-w-2xl mx-auto">
           Distinguished researchers and academics from across the globe.
         </p>
-        <span className="inline-block mt-2 px-4 py-1 bg-white bg-opacity-10 text-white text-sm font-semibold rounded-full border border-white border-opacity-20">
+
+        {/* Members Badge */}
+        <span className="inline-block mt-4 px-4 py-1 bg-white text-blue-700 text-sm font-semibold rounded-full border border-blue-200 shadow-sm">
           {tpcMembers.length} Members Worldwide
         </span>
-        <div className="mt-6 flex justify-center gap-2">
-          <div className="h-1 w-12 rounded-full bg-cyan-400"></div>
-          <div className="h-1 w-6 rounded-full bg-blue-400"></div>
+
+        {/* Accent Lines */}
+        <div className="mt-5 flex justify-center gap-2">
+          <div className="h-1 w-12 rounded-full bg-blue-500"></div>
+          <div className="h-1 w-6 rounded-full bg-indigo-400"></div>
           <div className="h-1 w-3 rounded-full bg-violet-400"></div>
         </div>
       </div>
 
-      {/* Search Bar */}
+      {/* ================= SEARCH ================= */}
       <div className="max-w-xl mx-auto mb-10">
+
         <div className="relative">
-          <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" />
+
+          {/* Search Icon */}
+          <svg
+            className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"
+            />
           </svg>
+
           <input
             type="text"
             placeholder="Search by name or affiliation..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-12 pr-4 py-3 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-full text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 text-sm"
+            className="
+              w-full
+              pl-12 pr-12 py-3
+              bg-white
+              border border-gray-200
+              rounded-full
+              text-gray-800
+              placeholder-gray-400
+              shadow-sm
+              focus:outline-none
+              focus:ring-2
+              focus:ring-blue-400
+              focus:border-transparent
+              transition-all duration-300
+              text-sm
+            "
           />
+
+          {/* Clear Button */}
           {search && (
-            <button onClick={() => setSearch("")} className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white transition-colors">
+            <button
+              onClick={() => setSearch("")}
+              className="
+                absolute right-4 top-1/2
+                -translate-y-1/2
+                text-gray-400
+                hover:text-gray-700
+                transition-colors
+              "
+            >
               ✕
             </button>
           )}
+
         </div>
+
+        {/* Search Result Count */}
         {search && (
-          <p className="text-center text-slate-400 text-sm mt-2">
+          <p className="text-center text-gray-500 text-sm mt-2">
             Showing {filtered.length} of {tpcMembers.length} members
           </p>
         )}
+
       </div>
 
-      {/* Members Grid */}
+      {/* ================= MEMBERS GRID ================= */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+
         {filtered.map((member, idx) => {
+
           const gradient = gradients[idx % gradients.length];
           const countryTag = getCountryTag(member.affiliation);
+
           return (
             <div
               key={idx}
-              className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-white border-opacity-10"
+              className="
+                group
+                relative
+                bg-white
+                rounded-3xl
+                overflow-hidden
+                border border-gray-200
+                shadow-sm
+                hover:shadow-xl
+                hover:scale-105
+                transition-all
+                duration-300
+              "
             >
-              {/* Top gradient bar */}
-              <div className={`h-1.5 w-full bg-gradient-to-r ${gradient}`}></div>
 
+              {/* ================= TOP GRADIENT ================= */}
+              <div
+                className={`
+                  h-1.5
+                  w-full
+                  bg-gradient-to-r
+                  ${gradient}
+                `}
+              ></div>
+
+              {/* ================= CARD CONTENT ================= */}
               <div className="p-5">
+
                 {/* Avatar + Name */}
                 <div className="flex items-center gap-3 mb-3">
-                  <div className={`w-11 h-11 rounded-full bg-gradient-to-br ${gradient} flex items-center justify-center text-white font-bold text-sm flex-shrink-0 shadow-md`}>
+
+                  {/* Avatar */}
+                  <div
+                    className={`
+                      w-11 h-11
+                      rounded-full
+                      bg-gradient-to-br
+                      ${gradient}
+                      flex items-center justify-center
+                      text-white
+                      font-bold
+                      text-sm
+                      flex-shrink-0
+                      shadow-md
+                    `}
+                  >
                     {getInitials(member.name)}
                   </div>
+
+                  {/* Name + Country */}
                   <div className="min-w-0">
-                    <p className="font-bold text-gray-900 text-sm leading-tight truncate">
+
+                    <p className="font-bold text-gray-900 text-sm leading-tight">
                       {member.name}
                     </p>
+
                     {countryTag && (
-                      <span className={`inline-block text-xs font-semibold px-2 py-0.5 rounded-full mt-1 ${countryTag.color}`}>
+                      <span
+                        className={`
+                          inline-block
+                          text-xs
+                          font-semibold
+                          px-2
+                          py-0.5
+                          rounded-full
+                          mt-1
+                          ${countryTag.color}
+                        `}
+                      >
                         {countryTag.label}
                       </span>
                     )}
+
                   </div>
+
                 </div>
 
-                {/* Divider */}
-                <div className={`h-px w-full bg-gradient-to-r ${gradient} opacity-30 mb-3`}></div>
+                {/* Gradient Divider */}
+                <div
+                  className={`
+                    h-px
+                    w-full
+                    bg-gradient-to-r
+                    ${gradient}
+                    opacity-30
+                    mb-3
+                  `}
+                ></div>
 
                 {/* Affiliation */}
                 <p className="text-gray-500 text-xs leading-relaxed">
                   {member.affiliation}
                 </p>
+
               </div>
             </div>
           );
         })}
+
       </div>
 
+      {/* ================= NO RESULTS ================= */}
       {filtered.length === 0 && (
-        <div className="text-center py-20 text-slate-400">
-          <p className="text-5xl mb-4">🔍</p>
-          <p className="text-lg font-semibold">No members found</p>
-          <p className="text-sm mt-1">Try a different name or affiliation</p>
+        <div className="text-center py-20 text-gray-500">
+
+          <p className="text-5xl mb-4">
+            🔍
+          </p>
+
+          <p className="text-lg font-semibold text-gray-700">
+            No members found
+          </p>
+
+          <p className="text-sm mt-1 text-gray-500">
+            Try a different name or affiliation
+          </p>
+
         </div>
       )}
+
     </div>
   );
 };

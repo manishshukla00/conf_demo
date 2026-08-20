@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; // <-- Add this import
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const Keynotespeakers = () => {
   const speakers = [
@@ -8,11 +8,6 @@ const Keynotespeakers = () => {
       image: "/images/1.jpg",
       designation: "Apple Inc., USA",
     },
-    // {
-    //   name: "Wazahat Ahmed Chowdhury",
-    //   image: "/images/2.jpg",
-    //   designation: "Matrix Medical Health– Phoenix, USA",
-    // },
     {
       name: "Sagar Kesarpu",
       image: "/images/3.jpg",
@@ -26,7 +21,7 @@ const Keynotespeakers = () => {
     {
       name: "Reena Chandra",
       image: "/images/4.jpg",
-      designation: "Amazon Inc, USA ",
+      designation: "Amazon Inc, USA",
     },
     {
       name: "Swati Karni",
@@ -46,7 +41,8 @@ const Keynotespeakers = () => {
     {
       name: "Prassanna R Rajgopal",
       image: "/images/23.jpg",
-      designation: "Cybersecurity Leader and Independent Researcher, USA. ",
+      designation:
+        "Cybersecurity Leader and Independent Researcher, USA.",
     },
     {
       name: "Shilpi Yadav",
@@ -96,7 +92,8 @@ const Keynotespeakers = () => {
     {
       name: "Vasudevan Senathi Ramdoss",
       image: "/images/14.jpg",
-      designation: " Senior performance Engineer & independent researcher",
+      designation:
+        "Senior performance Engineer & independent researcher",
     },
     {
       name: "Kishore Bandela",
@@ -106,133 +103,451 @@ const Keynotespeakers = () => {
     {
       name: "Dr. Abdul Aleem",
       image: "/images/22.jpg",
-      designation: " Galgotias University, Greater Noida",
+      designation: "Galgotias University, Greater Noida",
     },
     {
       name: "Karthik Sirigiri",
       image: "/images/16.jpg",
-      designation: "RedMane Technology LLC, USA ",
+      designation: "RedMane Technology LLC, USA",
     },
   ];
 
-  // Responsive items per slide
+  /* ============================================================
+     RESPONSIVE ITEMS PER SLIDE
+     ============================================================ */
   const getItemsPerSlide = () => {
-    if (window.innerWidth >= 1024) return 4; // lg
-    if (window.innerWidth >= 640) return 2; // sm/md
-    return 1; // xs
+    if (window.innerWidth >= 1024) return 4;
+    if (window.innerWidth >= 640) return 2;
+    return 1;
   };
 
-  const [itemsPerSlide, setItemsPerSlide] = useState(getItemsPerSlide());
+  const [itemsPerSlide, setItemsPerSlide] = useState(
+    getItemsPerSlide()
+  );
+
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  /* ============================================================
+     RESPONSIVE RESIZE
+     ============================================================ */
   useEffect(() => {
-    const handleResize = () => setItemsPerSlide(getItemsPerSlide());
+    const handleResize = () => {
+      setItemsPerSlide(getItemsPerSlide());
+      setCurrentSlide(0);
+    };
+
     window.addEventListener("resize", handleResize);
+
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const totalSlides = Math.ceil(speakers.length / itemsPerSlide);
+  /* ============================================================
+     SLIDER CALCULATIONS
+     ============================================================ */
+  const totalSlides = Math.ceil(
+    speakers.length / itemsPerSlide
+  );
 
   const handlePrev = () => {
-    setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
+    setCurrentSlide((prev) =>
+      prev === 0 ? totalSlides - 1 : prev - 1
+    );
   };
 
   const handleNext = () => {
-    setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
+    setCurrentSlide((prev) =>
+      prev === totalSlides - 1 ? 0 : prev + 1
+    );
   };
 
   const startIdx = currentSlide * itemsPerSlide;
-  const visibleSpeakers = speakers.slice(startIdx, startIdx + itemsPerSlide);
+
+  const visibleSpeakers = speakers.slice(
+    startIdx,
+    startIdx + itemsPerSlide
+  );
+
+  /* ============================================================
+     CARD THEMES
+     ============================================================ */
+  const gradients = [
+    {
+      color: "from-blue-500 to-cyan-400",
+      bg: "from-blue-50 to-cyan-50",
+      border: "border-blue-200",
+      badge: "bg-blue-100 text-blue-800",
+    },
+    {
+      color: "from-violet-500 to-purple-400",
+      bg: "from-violet-50 to-purple-50",
+      border: "border-violet-200",
+      badge: "bg-violet-100 text-violet-800",
+    },
+    {
+      color: "from-emerald-500 to-teal-400",
+      bg: "from-emerald-50 to-teal-50",
+      border: "border-emerald-200",
+      badge: "bg-emerald-100 text-emerald-800",
+    },
+    {
+      color: "from-rose-500 to-pink-400",
+      bg: "from-rose-50 to-pink-50",
+      border: "border-rose-200",
+      badge: "bg-rose-100 text-rose-800",
+    },
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-blue-200 to-indigo-300 p-4">
-      <div className="max-w-7xl mx-auto pt-20 relative">
-        {/* Page Title */}
-        <h1 className="text-4xl font-extrabold text-center text-blue-800 mb-6 pt-8">
-          Meet Our{" "}
-          <span className="text-violet-500">Keynote Speakers/Sessions Chair</span>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 pt-24 pb-16 px-4">
+
+      {/* ========================================================
+          HEADER
+      ======================================================== */}
+      <div className="text-center mb-12">
+
+        {/* Conference Badge */}
+        <span className="inline-block px-4 py-1 bg-blue-100 text-blue-700 text-sm font-semibold rounded-full border border-blue-200 mb-4 tracking-widest uppercase">
+          ConCISE 2027
+        </span>
+
+        {/* Main Heading */}
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 mb-3 leading-tight">
+          Keynote{" "}
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-violet-600">
+            Speakers
+          </span>
         </h1>
-        <p className="text-lg text-gray-800 leading-relaxed mb-8 text-center">
-          Our conference features distinguished speakers who are experts in
-          their respective fields. Learn from their insights and experiences.
+
+        {/* Subtitle */}
+        <p className="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">
+          Meet our distinguished keynote speakers and session chairs
+          from leading organizations and institutions around the world.
         </p>
 
-        {/* Carousel Controls (Icons centered vertically beside carousel grid) */}
-        <div className="relative flex items-center mr2">
-          {/* Left Icon */}
-          <button
-            onClick={handlePrev}
-            className="flex items-center justify-center bg-white border-4 border-gray-300 text-blue-700 p-3 rounded-full shadow-lg hover:bg-blue-100 hover:text-violet-500 transition z-10"
-            aria-label="Previous"
-            style={{
-              position: "absolute",
-              left: 0,
-              top: "50%",
-              transform: "translateY(-50%)",
-            }}
-          >
-            <FaChevronLeft size={32} />
-          </button>
+        {/* Accent Lines */}
+        <div className="mt-5 flex justify-center gap-2">
+          <div className="h-1 w-12 rounded-full bg-blue-500"></div>
+          <div className="h-1 w-6 rounded-full bg-indigo-400"></div>
+          <div className="h-1 w-3 rounded-full bg-violet-400"></div>
+        </div>
 
-          {/* Carousel Grid */}
-          <div
-            className={`w-full grid gap-6
-              ${
-                itemsPerSlide === 4
-                  ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
-                  : ""
-              }
-              ${itemsPerSlide === 2 ? "grid-cols-1 sm:grid-cols-2" : ""}
-              ${itemsPerSlide === 1 ? "grid-cols-1" : ""}
-            `}
-            style={{ margin: "0 56px" }} // Add space for icons
-          >
-            {visibleSpeakers.map((speaker, index) => (
+      </div>
+
+      {/* ========================================================
+          CAROUSEL
+      ======================================================== */}
+      <div className="max-w-6xl mx-auto relative">
+
+        {/* ======================================================
+            LEFT ARROW
+        ====================================================== */}
+        <button
+          onClick={handlePrev}
+          aria-label="Previous speakers"
+          className="
+            absolute
+            left-0
+            top-1/2
+            -translate-y-1/2
+            z-20
+
+            w-11
+            h-11
+
+            flex
+            items-center
+            justify-center
+
+            bg-white
+            border
+            border-gray-200
+
+            text-blue-600
+
+            rounded-full
+
+            shadow-lg
+
+            hover:bg-blue-50
+            hover:text-violet-600
+            hover:scale-110
+
+            transition-all
+            duration-300
+
+            -translate-x-1/2
+          "
+        >
+          <FaChevronLeft size={18} />
+        </button>
+
+        {/* ======================================================
+            SPEAKER GRID
+        ====================================================== */}
+        <div
+          className={`
+            grid
+            gap-6
+            ${
+              itemsPerSlide === 4
+                ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
+                : ""
+            }
+            ${
+              itemsPerSlide === 2
+                ? "grid-cols-1 sm:grid-cols-2"
+                : ""
+            }
+            ${
+              itemsPerSlide === 1
+                ? "grid-cols-1 max-w-sm mx-auto"
+                : ""
+            }
+          `}
+        >
+
+          {visibleSpeakers.map((speaker, index) => {
+
+            const theme =
+              gradients[
+                (startIdx + index) % gradients.length
+              ];
+
+            return (
               <div
                 key={startIdx + index}
-                className="bg-gradient-to-r from-blue-500 via-violet-500 to-emerald-400 p-1 rounded-lg shadow-lg hover:scale-105 transition-transform"
+                className={`
+                  relative
+                  rounded-3xl
+                  overflow-hidden
+                  bg-white
+                  border
+                  ${theme.border}
+
+                  shadow-sm
+
+                  hover:shadow-xl
+                  hover:scale-105
+
+                  transition-all
+                  duration-300
+                `}
               >
-                <div className="bg-white rounded-lg p-4 h-full flex flex-col items-center">
+
+                {/* =================================================
+                    TOP GRADIENT BAR
+                ================================================= */}
+                <div
+                  className={`
+                    h-1.5
+                    w-full
+                    bg-gradient-to-r
+                    ${theme.color}
+                  `}
+                ></div>
+
+                {/* =================================================
+                    CARD
+                ================================================= */}
+                <div
+                  className={`
+                    bg-gradient-to-br
+                    ${theme.bg}
+                    p-5
+
+                    min-h-[285px]
+
+                    flex
+                    flex-col
+                    items-center
+                    text-center
+                  `}
+                >
+
                   {/* Speaker Image */}
-                  <img
-                    src={speaker.image}
-                    alt={speaker.name}
-                    className="w-32 h-32 rounded-full mb-4 border-4 border-gray-300 shadow-md"
-                  />
+                  <div
+                    className={`
+                      w-28
+                      h-28
+                      rounded-full
+                      p-1
+
+                      bg-gradient-to-br
+                      ${theme.color}
+
+                      shadow-lg
+
+                      mb-4
+                    `}
+                  >
+                    <div className="w-full h-full rounded-full bg-white p-1">
+
+                      <img
+                        src={speaker.image}
+                        alt={speaker.name}
+                        className="
+                          w-full
+                          h-full
+                          rounded-full
+                          object-cover
+                        "
+                      />
+
+                    </div>
+                  </div>
+
                   {/* Speaker Name */}
-                  <h2 className="text-lg font-bold text-blue-700 mb-2 text-center">
+                  <h2 className="text-base font-black text-gray-900 leading-tight mb-3">
                     {speaker.name}
                   </h2>
-                  {/* Speaker Designation */}
-                  <p className="text-gray-600 text-center text-sm">
+
+                  {/* Designation */}
+                  <span
+                    className={`
+                      inline-block
+                      px-3
+                      py-1
+
+                      rounded-full
+
+                      text-xs
+                      font-bold
+
+                      leading-relaxed
+
+                      ${theme.badge}
+
+                      mb-3
+                    `}
+                  >
                     {speaker.designation}
+                  </span>
+
+                  {/* Divider */}
+                  <div
+                    className={`
+                      h-px
+                      w-14
+
+                      bg-gradient-to-r
+                      ${theme.color}
+
+                      opacity-50
+
+                      mb-3
+                    `}
+                  ></div>
+
+                  {/* Small Label */}
+                  <p className="text-gray-400 text-xs">
+                    Keynote Speaker / Session Chair
                   </p>
+
                 </div>
               </div>
-            ))}
-          </div>
+            );
+          })}
 
-          {/* Right Icon */}
-          <button
-            onClick={handleNext}
-            className="flex items-center justify-center bg-white border-4 border-gray-300 text-blue-700 p-3 rounded-full shadow-lg hover:bg-blue-100 hover:text-violet-500 transition z-10"
-            aria-label="Next"
-            style={{
-              position: "absolute",
-              right: 0,
-              top: "50%",
-              transform: "translateY(-50%)",
-            }}
-          >
-            <FaChevronRight size={32} />
-          </button>
         </div>
-        {/* End Carousel Controls */}
+
+        {/* ======================================================
+            RIGHT ARROW
+        ====================================================== */}
+        <button
+          onClick={handleNext}
+          aria-label="Next speakers"
+          className="
+            absolute
+            right-0
+            top-1/2
+            -translate-y-1/2
+            z-20
+
+            w-11
+            h-11
+
+            flex
+            items-center
+            justify-center
+
+            bg-white
+            border
+            border-gray-200
+
+            text-blue-600
+
+            rounded-full
+
+            shadow-lg
+
+            hover:bg-blue-50
+            hover:text-violet-600
+            hover:scale-110
+
+            transition-all
+            duration-300
+
+            translate-x-1/2
+          "
+        >
+          <FaChevronRight size={18} />
+        </button>
+
       </div>
+
+      {/* ========================================================
+          SLIDE INDICATOR
+      ======================================================== */}
+      <div className="flex justify-center items-center gap-2 mt-8">
+
+        {Array.from({ length: totalSlides }).map((_, index) => (
+
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            aria-label={`Go to slide ${index + 1}`}
+            className={`
+              h-2
+              rounded-full
+              transition-all
+              duration-300
+
+              ${
+                currentSlide === index
+                  ? "w-8 bg-gradient-to-r from-blue-600 to-violet-600"
+                  : "w-2 bg-gray-300 hover:bg-blue-300"
+              }
+            `}
+          ></button>
+
+        ))}
+
+      </div>
+
+      {/* ========================================================
+          SLIDE COUNT
+      ======================================================== */}
+      <p className="text-center text-gray-400 text-sm mt-3">
+        Showing{" "}
+        <span className="font-semibold text-gray-600">
+          {startIdx + 1}
+        </span>
+        {" – "}
+        <span className="font-semibold text-gray-600">
+          {Math.min(
+            startIdx + itemsPerSlide,
+            speakers.length
+          )}
+        </span>{" "}
+        of{" "}
+        <span className="font-semibold text-gray-600">
+          {speakers.length}
+        </span>{" "}
+        speakers
+      </p>
+
     </div>
   );
 };
 
 export default Keynotespeakers;
-
-
