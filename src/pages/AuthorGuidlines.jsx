@@ -12,9 +12,8 @@ const AuthorGuidlines = () => {
             </h2>
             <p className="text-lg text-gray-800 mb-4">
               We are excited to welcome authors to submit their technical papers
-              for the 2nd International Conference on
-              Artificial Intelligence, Smart Computing
-              and Data Science (AISCDS), 2K27 using
+              for the International Conference on
+Computational Intelligence & Systems Engineering (ConCISE), 2K27 using
               Microsoft CMT. Please cohere to the instructions outlined below to
               ensure a smooth submission process:
             </p>
@@ -111,14 +110,31 @@ const AuthorGuidlines = () => {
             </ul>
             <br></br>
             <p>
-              Regular Papers: between 4 to 5 pages maximum (2 additional pages
-              allowed but at an extra charges). Regular papers should present
-              novel perspectives within the general scope of the conference. A
-              very limited number of short papers (between 2 to 3 pages) can be
-              accepted based on the review and conference chair’s decision
+                <h2 className="text-2xl font-bold text-gray-800 mb-4">
+    ConCISE-2027 Paper Categories
+  </h2>
+
+  <ul className="list-disc list-inside space-y-2 text-gray-700 mb-4">
+    <li>
+      Regular Paper – 10 pages maximum (2 additional pages allowed but at an
+      extra charge)
+    </li>
+    <li>
+      There is no provision for submitting short papers and poster papers.
+    </li>
+  </ul>
+
+  <p className="text-gray-700 leading-relaxed">
+    Regular papers should present novel perspectives within the general scope
+    of the conference. Short papers (Work-in-Progress) are an opportunity to
+    present preliminary or interim results. Posters are intended for ongoing
+    research projects, concrete realizations, or industrial applications/project
+    presentations. Double-Blind review is to be followed strictly. That means
+    the author will submit the paper without their name and address details.
+  </p>
             </p>
 
-            <h3 className="text-2xl font-bold text-blue-700 mt-6 mb-4">
+            {/* <h3 className="text-2xl font-bold text-blue-700 mt-6 mb-4">
               Author's Guidelines:
             </h3>
             <p className="text-lg text-gray-800 mb-4"></p>
@@ -150,7 +166,7 @@ const AuthorGuidlines = () => {
                 electronically via Microsoft CMT Link.
               </li>
               <li>Maximum 5 authors allowed in the manuscript.</li>
-            </ul>
+            </ul> */}
             <h3 className="text-2xl font-bold text-blue-700 mt-6 mb-4">
               Paper Submission:
             </h3>
@@ -217,7 +233,7 @@ const AuthorGuidlines = () => {
               Mode of Presentation:
             </h3>
             <p className="text-lg text-gray-800 mb-4">
-              AISCDS-2027 will be held in hybrid mode, where authors shall
+              ConCISE-2027 will be held in hybrid mode, where authors shall
               present their papers either in physical mode at the conference
               venue or online as per their preference and convenience. The
               proceedings and certificates will be sent to the email ids of the
@@ -225,7 +241,7 @@ const AuthorGuidlines = () => {
               and indexing will remain unchanged.
             </p>
             <p className="text-lg text-gray-800 mb-4">
-              <span className="font-bold">PPT Template for AISCDS:</span>
+              <span className="font-bold">PPT Template for ConCISE:</span>
               <a
                 href="/files/ppt-template.pptx"
                 download
