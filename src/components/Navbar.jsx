@@ -1,123 +1,838 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 
-const ChevronIcon = ({ open }) => (
+/* =========================================================
+   ICONS
+   ========================================================= */
+
+const ChevronIcon = ({ open = false }) => (
   <svg
-    className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${open ? "rotate-180" : "rotate-0"}`}
-    fill="none" viewBox="0 0 24 24" stroke="currentColor"
+    className={`w-4 h-4 transition-transform duration-300 ${
+      open ? "rotate-180" : ""
+    }`}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
   >
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+    <path d="m6 9 6 6 6-6" />
   </svg>
 );
+
+const MenuIcon = () => (
+  <svg
+    className="w-6 h-6"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    aria-hidden="true"
+  >
+    <path d="M4 7h16M4 12h16M4 17h16" />
+  </svg>
+);
+
+const CloseIcon = () => (
+  <svg
+    className="w-6 h-6"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    aria-hidden="true"
+  >
+    <path d="M6 6l12 12M18 6 6 18" />
+  </svg>
+);
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [mobileDropdown, setMobileDropdown] = useState(null);
 
-  const toggleMenu = () => { setIsMenuOpen(!isMenuOpen); setMobileDropdown(null); };
-  const toggleDropdown = (name) => setOpenDropdown(openDropdown === name ? null : name);
-  const toggleMobileDropdown = (name) => setMobileDropdown(mobileDropdown === name ? null : name);
-  const closeMobileMenu = () => { setIsMenuOpen(false); setMobileDropdown(null); };
+  /* =======================================================
+     LOAD MODERN FONT — PLUS JAKARTA SANS
+     ======================================================= */
+
+  useEffect(() => {
+    const fontId = "concise-plus-jakarta-font";
+
+    if (!document.getElementById(fontId)) {
+      const link = document.createElement("link");
+
+      link.id = fontId;
+      link.rel = "stylesheet";
+      link.href =
+        "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap";
+
+      document.head.appendChild(link);
+    }
+  }, []);
+
+  /* =======================================================
+     CLOSE MOBILE MENU ON DESKTOP
+     ======================================================= */
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsMenuOpen(false);
+        setMobileDropdown(null);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  /* =======================================================
+     LOCK BODY SCROLL WHEN MOBILE MENU IS OPEN
+     ======================================================= */
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen]);
+
+  /* =======================================================
+     NAVIGATION DATA
+     ======================================================= */
+
+  const mainLinks = [
+    {
+      to: "/",
+      label: "Home",
+    },
+    {
+      to: "/about",
+      label: "About",
+    },
+  ];
+
+  const dropdowns = [
+    {
+      key: "committee",
+      label: "Committee",
+      links: [
+        {
+          to: "/committee-member",
+          label: "Committee Members",
+        },
+        {
+          to: "/technicalprogramcommitte",
+          label: "Technical Program Committee",
+        },
+      ],
+    },
+
+    {
+      key: "callforpapers",
+      label: "Call for Papers",
+      links: [
+        {
+          to: "/callforpapers",
+          label: "Call for Papers",
+        },
+        {
+          to: "/author-guidelines",
+          label: "Submission",
+        },
+        {
+          to: "/publication-ethics",
+          label: "Publication Ethics",
+        },
+      ],
+    },
+
+    {
+      key: "speakers",
+      label: "Speakers",
+      links: [
+        {
+          to: "/speakers",
+          label: "Speakers",
+        },
+        {
+          to: "/keynotespeakers",
+          label: "Keynote Speakers",
+        },
+      ],
+    },
+  ];
+
+  const rightLinks = [
+    {
+      to: "/registration",
+      label: "Registration",
+    },
+    {
+      to: "/contact",
+      label: "Contact",
+    },
+  ];
+
+  /* =======================================================
+     FUNCTIONS
+     ======================================================= */
+
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev);
+    setMobileDropdown(null);
+    setOpenDropdown(null);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMenuOpen(false);
+    setMobileDropdown(null);
+  };
+
+  const toggleDesktopDropdown = (name) => {
+    setOpenDropdown((prev) => (prev === name ? null : name));
+  };
+
+  const toggleMobileDropdown = (name) => {
+    setMobileDropdown((prev) => (prev === name ? null : name));
+  };
+
+  /* =======================================================
+     DESKTOP LINK STYLE
+     ======================================================= */
+
+  const desktopLinkClass = ({ isActive }) =>
+    `
+      relative
+      flex
+      items-center
+      h-10
+      px-3.5
+      rounded-lg
+      text-[13.5px]
+      lg:text-[14px]
+      font-semibold
+      tracking-[-0.015em]
+      transition-all
+      duration-200
+      ${
+        isActive
+          ? "text-blue-700 bg-blue-50/80"
+          : "text-slate-700 hover:text-blue-700 hover:bg-slate-50"
+      }
+    `;
+
+  /* =======================================================
+     RETURN
+     ======================================================= */
 
   return (
-    <div className="w-full bg-white bg-opacity-95 backdrop-blur-lg fixed top-0 left-0 z-50 shadow-lg border-b border-gray-200">
-      <nav className="w-full max-w-screen-xl mx-auto flex items-center px-4 sm:px-6 lg:px-8 py-3">
-        <div className="flex-shrink-0">
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="h-60 w-60 sm:w-16 sm:h-16 overflow-hidden shadow-md group-hover:shadow-lg transition-all duration-300 transform group-hover:scale-105">
-              <img src="/images/springer.jpeg" alt="ConCISE Logo" loading="lazy" className="w-full h-full object-cover" />
+    <>
+      {/* =====================================================
+          MAIN NAVBAR
+          ===================================================== */}
+
+      <header
+        className="
+          fixed
+          top-0
+          left-0
+          right-0
+          z-50
+          h-[74px]
+          sm:h-[80px]
+          lg:h-[84px]
+          bg-white/95
+          backdrop-blur-xl
+          border-b
+          border-slate-200/80
+          shadow-[0_4px_20px_rgba(15,23,42,0.06)]
+        "
+        style={{
+          fontFamily: "'Plus Jakarta Sans', sans-serif",
+        }}
+      >
+        <nav
+          className="
+            h-full
+            max-w-[1440px]
+            mx-auto
+            px-4
+            sm:px-6
+            lg:px-8
+            xl:px-10
+            flex
+            items-center
+          "
+          aria-label="Main navigation"
+        >
+          {/* =================================================
+              LOGO
+              ================================================= */}
+
+          <Link
+            to="/"
+            onClick={closeMobileMenu}
+            className="
+              flex
+              items-center
+              shrink-0
+              group
+              focus:outline-none
+            "
+            aria-label="ConCISE 2027 Home"
+          >
+            <div
+              className="
+                relative
+                flex
+                items-center
+                justify-center
+                w-[56px]
+                h-[56px]
+                sm:w-[62px]
+                sm:h-[62px]
+                md:w-[68px]
+                md:h-[68px]
+                lg:w-[72px]
+                lg:h-[72px]
+                rounded-full
+                bg-white
+                overflow-hidden
+                transition-all
+                duration-300
+                group-hover:scale-[1.03]
+                group-hover:shadow-lg
+                shadow-sm
+                ring-1
+                ring-slate-200
+              "
+            >
+              <img
+                src="/images/conf_logo.jpeg"
+                alt="ConCISE 2027 International Conference"
+                loading="eager"
+                className="
+                  w-full
+                  h-full
+                  object-contain
+                  p-0.5
+                  block
+                "
+              />
             </div>
-            {/* <div className="hidden sm:block">
-              <span className="font-display font-bold text-xl text-gray-900">ConCISE</span>
-              <p className="text-xs text-gray-500">2027</p>
-            </div> */}
           </Link>
-        </div>
 
-        <div className="hidden md:flex flex-1 items-center justify-center gap-1 font-semibold">
-          {[{ to: "/", label: "Home" }, { to: "/about", label: "About" }].map(({ to, label }) => (
-            <Link key={to} to={to} className="relative px-3 py-2 text-gray-700 hover:text-gray-900 transition-colors group text-sm">
-              {label}
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-          ))}
+          {/* =================================================
+              DESKTOP NAVIGATION
+              ================================================= */}
 
-          {[
-            { key: "committee", label: "Committee", links: [{ to: "/committee-member", label: "Committee Members" }, { to: "/technicalprogramcommitte", label: "Technical Program Committee" }] },
-            { key: "callforpapers", label: "Call For Papers", links: [{ to: "/callforpapers", label: "Call for Papers" }, { to: "/author-guidelines", label: "Submission" }, { to: "/publication-ethics", label: "Publication Ethics" }] },
-            { key: "speakers", label: "Speakers", links: [{ to: "/speakers", label: "Speaker" }, { to: "/keynotespeakers", label: "Keynote Speaker" }] },
-          ].map(({ key, label, links }) => (
-            <div key={key} className="relative">
-              <button onClick={() => toggleDropdown(key)} className="flex items-center px-3 py-2 text-sm text-gray-700 hover:text-gray-900 transition-colors focus:outline-none">
-                {label} <ChevronIcon open={openDropdown === key} />
-              </button>
-              {openDropdown === key && (
-                <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-xl rounded-xl border border-gray-100 overflow-hidden z-10">
-                  {links.map(({ to, label: lbl }) => (
-                    <Link key={to} to={to} onClick={() => setOpenDropdown(null)} className="block px-4 py-3 text-sm text-gray-700 hover:bg-purple-50 hover:text-blue-700 transition-all">
-                      {lbl}
-                    </Link>
-                  ))}
+          <div
+            className="
+              hidden
+              md:flex
+              flex-1
+              items-center
+              justify-center
+              ml-5
+              lg:ml-8
+            "
+          >
+            <div className="flex items-center gap-0.5 lg:gap-1">
+              {/* Home + About */}
+
+              {mainLinks.map(({ to, label }) => (
+                <NavLink
+                  key={to}
+                  to={to}
+                  end={to === "/"}
+                  className={desktopLinkClass}
+                >
+                  {label}
+                </NavLink>
+              ))}
+
+              {/* =================================================
+                  DROPDOWN MENUS
+                  ================================================= */}
+
+              {dropdowns.map(({ key, label, links }) => (
+                <div key={key} className="relative">
+                  <button
+                    type="button"
+                    onClick={() => toggleDesktopDropdown(key)}
+                    className={`
+                      relative
+                      flex
+                      items-center
+                      gap-1.5
+                      h-10
+                      px-3.5
+                      rounded-lg
+                      text-[13.5px]
+                      lg:text-[14px]
+                      font-semibold
+                      tracking-[-0.015em]
+                      transition-all
+                      duration-200
+                      ${
+                        openDropdown === key
+                          ? "text-blue-700 bg-blue-50/80"
+                          : "text-slate-700 hover:text-blue-700 hover:bg-slate-50"
+                      }
+                    `}
+                  >
+                    {label}
+
+                    <ChevronIcon open={openDropdown === key} />
+                  </button>
+
+                  {/* Dropdown panel */}
+
+                  <div
+                    className={`
+                      absolute
+                      top-[calc(100%+9px)]
+                      left-0
+                      w-[255px]
+                      rounded-xl
+                      bg-white
+                      border
+                      border-slate-200
+                      shadow-[0_15px_45px_rgba(15,23,42,0.12)]
+                      overflow-hidden
+                      transition-all
+                      duration-200
+                      origin-top
+                      ${
+                        openDropdown === key
+                          ? "opacity-100 scale-100 visible"
+                          : "opacity-0 scale-95 invisible pointer-events-none"
+                      }
+                    `}
+                  >
+                    {/* Small top accent */}
+
+                    <div className="h-[3px] bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-400" />
+
+                    <div className="py-2">
+                      {links.map(({ to, label: dropdownLabel }) => (
+                        <NavLink
+                          key={to}
+                          to={to}
+                          onClick={() => setOpenDropdown(null)}
+                          className={({ isActive }) => `
+                              group
+                              flex
+                              items-center
+                              justify-between
+                              mx-2
+                              px-3.5
+                              py-3
+                              rounded-lg
+                              text-[13px]
+                              font-medium
+                              tracking-[-0.01em]
+                              transition-all
+                              duration-200
+                              ${
+                                isActive
+                                  ? "bg-blue-50 text-blue-700"
+                                  : "text-slate-600 hover:bg-slate-50 hover:text-blue-700"
+                              }
+                            `}
+                        >
+                          <span>{dropdownLabel}</span>
+
+                          <svg
+                            className="
+                                w-4
+                                h-4
+                                opacity-0
+                                -translate-x-1
+                                group-hover:opacity-100
+                                group-hover:translate-x-0
+                                transition-all
+                                duration-200
+                              "
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="1.8"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          >
+                            <path d="M9 18l6-6-6-6" />
+                          </svg>
+                        </NavLink>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-              )}
+              ))}
+
+              {/* =================================================
+                  REGISTRATION + CONTACT
+                  ================================================= */}
+
+              {rightLinks.map(({ to, label }) => (
+                <NavLink
+                  key={to}
+                  to={to}
+                  className={({ isActive }) => `
+                    relative
+                    flex
+                    items-center
+                    h-10
+                    px-3.5
+                    rounded-lg
+                    text-[13.5px]
+                    lg:text-[14px]
+                    font-semibold
+                    tracking-[-0.015em]
+                    transition-all
+                    duration-200
+                    ${
+                      to === "/registration"
+                        ? isActive
+                          ? "bg-blue-700 text-white shadow-md shadow-blue-700/20"
+                          : "bg-slate-900 text-white hover:bg-blue-700 shadow-sm"
+                        : isActive
+                          ? "text-blue-700 bg-blue-50/80"
+                          : "text-slate-700 hover:text-blue-700 hover:bg-slate-50"
+                    }
+                  `}
+                >
+                  {label}
+                </NavLink>
+              ))}
             </div>
-          ))}
+          </div>
 
-          {[{ to: "/registration", label: "Registration" }, { to: "/contact", label: "Contact" }].map(({ to, label }) => (
-            <Link key={to} to={to} className="relative px-3 py-2 text-sm text-gray-700 hover:text-gray-900 transition-colors group">
-              {label}
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-          ))}
-        </div>
+          {/* =================================================
+              MOBILE BUTTON
+              ================================================= */}
 
-        {/* <div className="hidden md:flex flex-shrink-0 items-center gap-3 ml-4">
-          <Link to="/registration" className="px-5 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-full hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-md">Book Tickets</Link>
-          <Link to="/contact" className="px-5 py-2 bg-teal-500 text-white text-sm font-semibold rounded-full hover:bg-teal-600 transition-all duration-300 transform hover:scale-105 shadow-md">Exhibit</Link>
-        </div> */}
+          <div className="md:hidden ml-auto">
+            <button
+              type="button"
+              onClick={toggleMenu}
+              aria-label={
+                isMenuOpen ? "Close navigation menu" : "Open navigation menu"
+              }
+              aria-expanded={isMenuOpen}
+              className="
+                flex
+                items-center
+                justify-center
+                w-10
+                h-10
+                rounded-xl
+                text-slate-800
+                bg-slate-50
+                border
+                border-slate-200
+                hover:bg-blue-50
+                hover:text-blue-700
+                transition-all
+                duration-200
+                focus:outline-none
+              "
+            >
+              {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
+            </button>
+          </div>
+        </nav>
+      </header>
 
-        <div className="md:hidden ml-auto">
-          <button onClick={toggleMenu} className="text-gray-900 text-3xl focus:outline-none hover:text-blue-600 transition-colors p-2" aria-label="Toggle menu">
-            {isMenuOpen ? "✖" : "☰"}
-          </button>
-        </div>
-      </nav>
+      {/* =====================================================
+          MOBILE OVERLAY
+          ===================================================== */}
 
-      {isMenuOpen && (
-        <div className="fixed top-0 left-0 w-full h-screen bg-black bg-opacity-90 text-white flex flex-col items-center justify-center space-y-2 z-40 overflow-y-auto py-10">
-          <button onClick={toggleMenu} className="absolute top-4 right-6 text-3xl text-white hover:text-blue-400 transition-colors">✖</button>
-          {[{ to: "/", label: "Home" }, { to: "/about", label: "About" }].map(({ to, label }) => (
-            <Link key={to} to={to} onClick={closeMobileMenu} className="text-2xl font-bold hover:text-blue-300 transition-colors py-2">{label}</Link>
-          ))}
-          {[
-            { key: "committee", label: "Committee", links: [{ to: "/committee-member", label: "Committee Members" }, { to: "/technicalprogramcommitte", label: "Technical Program Committee" }] },
-            { key: "callforpapers", label: "Call For Papers", links: [{ to: "/callforpapers", label: "Call for Papers" }, { to: "/author-guidelines", label: "Submission" }, { to: "/publication-ethics", label: "Publication Ethics" }] },
-            { key: "speakers", label: "Speakers", links: [{ to: "/speakers", label: "Speaker" }, { to: "/keynotespeakers", label: "Keynote Speaker" }] },
-          ].map(({ key, label, links }) => (
-            <div key={key} className="flex flex-col items-center w-full">
-              <button onClick={() => toggleMobileDropdown(key)} className="flex items-center gap-1 text-2xl font-bold hover:text-blue-300 transition-colors py-2 focus:outline-none">
-                {label} <ChevronIcon open={mobileDropdown === key} />
-              </button>
-              {mobileDropdown === key && (
-                <div className="flex flex-col items-center gap-1 mt-1 mb-2 bg-white bg-opacity-10 rounded-xl px-6 py-3 w-72">
-                  {links.map(({ to, label: lbl }) => (
-                    <Link key={to} to={to} onClick={closeMobileMenu} className="text-lg font-medium hover:text-blue-300 transition-colors py-1">{lbl}</Link>
-                  ))}
+      <div
+        className={`
+          md:hidden
+          fixed
+          inset-0
+          z-40
+          bg-slate-950/30
+          backdrop-blur-sm
+          transition-all
+          duration-300
+          ${
+            isMenuOpen
+              ? "opacity-100 visible"
+              : "opacity-0 invisible pointer-events-none"
+          }
+        `}
+        onClick={closeMobileMenu}
+      >
+        {/* ===================================================
+            MOBILE PANEL
+            =================================================== */}
+
+        <div
+          className={`
+            absolute
+            top-[74px]
+            sm:top-[80px]
+            left-0
+            right-0
+            bg-white
+            border-t
+            border-slate-200
+            shadow-[0_20px_50px_rgba(15,23,42,0.15)]
+            max-h-[calc(100vh-74px)]
+            overflow-y-auto
+            transition-all
+            duration-300
+            ${
+              isMenuOpen
+                ? "translate-y-0 opacity-100"
+                : "-translate-y-4 opacity-0"
+            }
+          `}
+          onClick={(e) => e.stopPropagation()}
+          style={{
+            fontFamily: "'Plus Jakarta Sans', sans-serif",
+          }}
+        >
+          <div className="px-5 py-6">
+            {/* Conference information */}
+
+            <div className="mb-5 pb-4 border-b border-slate-100">
+              <p
+                className="
+                  text-[10px]
+                  uppercase
+                  tracking-[0.24em]
+                  font-bold
+                  text-blue-600
+                "
+              >
+                ConCISE 2027
+              </p>
+
+              <p
+                className="
+                  mt-1
+                  text-sm
+                  font-medium
+                  text-slate-500
+                "
+              >
+                International Conference
+              </p>
+            </div>
+
+            <div className="space-y-1">
+              {/* Home + About */}
+
+              {mainLinks.map(({ to, label }) => (
+                <NavLink
+                  key={to}
+                  to={to}
+                  end={to === "/"}
+                  onClick={closeMobileMenu}
+                  className={({ isActive }) => `
+                    flex
+                    items-center
+                    h-12
+                    px-4
+                    rounded-xl
+                    text-[15px]
+                    font-semibold
+                    tracking-[-0.01em]
+                    transition-all
+                    ${
+                      isActive
+                        ? "bg-blue-50 text-blue-700"
+                        : "text-slate-700 hover:bg-slate-50 hover:text-blue-700"
+                    }
+                  `}
+                >
+                  {label}
+                </NavLink>
+              ))}
+
+              {/* =================================================
+                  MOBILE DROPDOWNS
+                  ================================================= */}
+
+              {dropdowns.map(({ key, label, links }) => (
+                <div key={key}>
+                  <button
+                    type="button"
+                    onClick={() => toggleMobileDropdown(key)}
+                    className={`
+                        w-full
+                        flex
+                        items-center
+                        justify-between
+                        h-12
+                        px-4
+                        rounded-xl
+                        text-[15px]
+                        font-semibold
+                        tracking-[-0.01em]
+                        transition-all
+                        ${
+                          mobileDropdown === key
+                            ? "bg-blue-50 text-blue-700"
+                            : "text-slate-700 hover:bg-slate-50 hover:text-blue-700"
+                        }
+                      `}
+                  >
+                    <span>{label}</span>
+
+                    <ChevronIcon open={mobileDropdown === key} />
+                  </button>
+
+                  {mobileDropdown === key && (
+                    <div
+                      className="
+                          ml-4
+                          mt-1
+                          mb-2
+                          pl-3
+                          border-l-2
+                          border-blue-100
+                          space-y-1
+                        "
+                    >
+                      {links.map(({ to, label: dropdownLabel }) => (
+                        <NavLink
+                          key={to}
+                          to={to}
+                          onClick={closeMobileMenu}
+                          className={({ isActive }) => `
+                                flex
+                                items-center
+                                min-h-[44px]
+                                px-3
+                                rounded-lg
+                                text-sm
+                                font-medium
+                                tracking-[-0.01em]
+                                transition-all
+                                ${
+                                  isActive
+                                    ? "text-blue-700 bg-blue-50"
+                                    : "text-slate-600 hover:text-blue-700 hover:bg-slate-50"
+                                }
+                              `}
+                        >
+                          {dropdownLabel}
+                        </NavLink>
+                      ))}
+                    </div>
+                  )}
                 </div>
-              )}
+              ))}
+
+              {/* =================================================
+                  REGISTRATION
+                  ================================================= */}
+
+              <NavLink
+                to="/registration"
+                onClick={closeMobileMenu}
+                className={({ isActive }) => `
+                  flex
+                  items-center
+                  justify-center
+                  h-12
+                  mt-3
+                  px-5
+                  rounded-xl
+                  text-[14px]
+                  font-bold
+                  tracking-[-0.01em]
+                  transition-all
+                  ${
+                    isActive
+                      ? "bg-blue-700 text-white"
+                      : "bg-slate-900 text-white hover:bg-blue-700"
+                  }
+                `}
+              >
+                Registration
+              </NavLink>
+
+              {/* =================================================
+                  CONTACT
+                  ================================================= */}
+
+              <NavLink
+                to="/contact"
+                onClick={closeMobileMenu}
+                className={({ isActive }) => `
+                  flex
+                  items-center
+                  h-12
+                  mt-1
+                  px-4
+                  rounded-xl
+                  text-[15px]
+                  font-semibold
+                  tracking-[-0.01em]
+                  transition-all
+                  ${
+                    isActive
+                      ? "bg-blue-50 text-blue-700"
+                      : "text-slate-700 hover:bg-slate-50 hover:text-blue-700"
+                  }
+                `}
+              >
+                Contact
+              </NavLink>
             </div>
-          ))}
-          {[{ to: "/registration", label: "Registration" }, { to: "/contact", label: "Contact" }].map(({ to, label }) => (
-            <Link key={to} to={to} onClick={closeMobileMenu} className="text-2xl font-bold hover:text-blue-300 transition-colors py-2">{label}</Link>
-          ))}
-          {/* <div className="flex gap-4 mt-4">
-            <Link to="/registration" onClick={closeMobileMenu} className="px-6 py-2 bg-indigo-600 text-white font-semibold rounded-full hover:bg-indigo-700 transition-all">Book Tickets</Link>
-            <Link to="/contact" onClick={closeMobileMenu} className="px-6 py-2 bg-teal-500 text-white font-semibold rounded-full hover:bg-teal-600 transition-all">Exhibit</Link>
-          </div> */}
+
+            {/* =================================================
+                MOBILE FOOTER
+                ================================================= */}
+
+            <div
+              className="
+                mt-7
+                pt-5
+                border-t
+                border-slate-100
+              "
+            >
+              <p
+                className="
+                  text-xs
+                  text-slate-400
+                  leading-relaxed
+                "
+              >
+                ConCISE 2027
+                <br />
+                International Conference on Computational Intelligence &amp;
+                Systems Engineering
+              </p>
+            </div>
+          </div>
         </div>
-      )}
-    </div>
+      </div>
+    </>
   );
 };
 
