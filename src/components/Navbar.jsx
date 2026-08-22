@@ -324,7 +324,7 @@ const Navbar = () => {
                 ring-slate-200
               "
             >
-              <img
+              {/* <img
                 src="/images/conf_logo.jpeg"
                 alt="ConCISE 2027 International Conference"
                 loading="eager"
@@ -335,7 +335,7 @@ const Navbar = () => {
                   p-0.5
                   block
                 "
-              />
+              /> */}
             </div>
           </Link>
 

@@ -411,7 +411,7 @@ const About = () => {
                   p-1
                 "
               >
-                <img
+                {/* <img
                   src="/images/springer.jpeg"
                   alt="Springer"
                   className="
@@ -419,7 +419,7 @@ const About = () => {
                     h-full
                     object-contain
                   "
-                />
+                /> */}
               </div>
 
               <div
@@ -433,14 +433,14 @@ const About = () => {
                   p-2
                 "
               >
-                <img
+                {/* <img
                   src="/images/book.png"
                   alt="CRC Press"
                   className="
                     w-full
                     object-contain
                   "
-                />
+                /> */}
               </div>
             </div>
 

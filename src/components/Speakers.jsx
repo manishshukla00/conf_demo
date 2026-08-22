@@ -30,32 +30,61 @@ const Speakers = () => {
     };
   }, []);
 
+  // const speakers = [
+  //   {
+  //     name: "Comming Soon",
+  //     image:
+  //       "https://i1.rgstatic.net/ii/profile.image/564921299464192-1511699141118_Q128/Siddhartha-Bhattacharyya-2.jpg",
+  //     designation: "Professor",
+  //     department: "VSB Technical University of Ostrava, Czech Republic",
+  //     gradient: "from-blue-500 to-cyan-500",
+  //   },
+
+  //   {
+  //     name: "Comming Soon",
+  //     image:
+  //       "https://i1.rgstatic.net/ii/profile.image/886099685675010-1588274036653_Q512/Jyoti-Sekhar-Banerjee.jpg",
+  //     designation: "Asso. Prof. & Head, CSE (AI&ML)",
+  //     department:
+  //       "Techno Bengal Institute of Technology & Remote Researcher, UOWM, Greece",
+  //     gradient: "from-blue-500 to-violet-500",
+  //   },
+
+  //   {
+  //     name: "Comming Soon",
+  //     image: "/images/17.jpg",
+  //     designation: "Professor",
+  //     department: "AKGEC, India",
+  //     gradient: "from-orange-500 to-red-500",
+  //   },
+  // ];
+
   const speakers = [
     {
-      name: "Prof. Siddhartha Bhattacharyya",
-      image:
-        "https://i1.rgstatic.net/ii/profile.image/564921299464192-1511699141118_Q128/Siddhartha-Bhattacharyya-2.jpg",
-      designation: "Professor",
-      department: "VSB Technical University of Ostrava, Czech Republic",
-      gradient: "from-blue-500 to-cyan-500",
+      name: "Comming Soon",
+      // image:
+      //   "https://i1.rgstatic.net/ii/profile.image/564921299464192-1511699141118_Q128/Siddhartha-Bhattacharyya-2.jpg",
+      // designation: "Professor",
+      // department: "VSB Technical University of Ostrava, Czech Republic",
+      // gradient: "from-blue-500 to-cyan-500",
     },
 
     {
-      name: "Prof. Jyoti Sekhar Banerjee",
-      image:
-        "https://i1.rgstatic.net/ii/profile.image/886099685675010-1588274036653_Q512/Jyoti-Sekhar-Banerjee.jpg",
-      designation: "Asso. Prof. & Head, CSE (AI&ML)",
-      department:
-        "Techno Bengal Institute of Technology & Remote Researcher, UOWM, Greece",
-      gradient: "from-blue-500 to-violet-500",
+      name: "",
+      // image:
+      //   "https://i1.rgstatic.net/ii/profile.image/886099685675010-1588274036653_Q512/Jyoti-Sekhar-Banerjee.jpg",
+      // designation: "Asso. Prof. & Head, CSE (AI&ML)",
+      // department:
+      //   "Techno Bengal Institute of Technology & Remote Researcher, UOWM, Greece",
+      // gradient: "from-blue-500 to-violet-500",
     },
 
     {
-      name: "Dr. Rajesh Prasad",
-      image: "/images/17.jpg",
-      designation: "Professor",
-      department: "AKGEC, India",
-      gradient: "from-orange-500 to-red-500",
+      name: "",
+      // image: "/images/17.jpg",
+      // designation: "Professor",
+      // department: "AKGEC, India",
+      // gradient: "from-orange-500 to-red-500",
     },
   ];
 
@@ -329,7 +358,7 @@ const Speakers = () => {
                     bg-slate-100
                   "
                 >
-                  <img
+                  {/* <img
                     src={speaker.image}
                     alt={speaker.name}
                     className="
@@ -342,7 +371,7 @@ const Speakers = () => {
                       group-hover:scale-[1.03]
                     "
                     loading="lazy"
-                  />
+                  /> */}
 
                   {/* Subtle image overlay */}
 

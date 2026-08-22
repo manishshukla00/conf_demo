@@ -5,7 +5,7 @@ const About = () => {
     <div className="w-full px-4 sm:px-6 lg:px-8 py-8 bg-gray-100">
       <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between">
         {/* Left Side - Logos */}
-        <div className="flex flex-col items-center md:items-start md:w-1/3 space-y-4">
+        {/* <div className="flex flex-col items-center md:items-start md:w-1/3 space-y-4">
           <img
             src="/images/springer.jpeg"
             alt="United University Logo"
@@ -16,7 +16,7 @@ const About = () => {
             alt="Taylor & Francis Logo"
             className="w-40 object-contain transform transition-transform duration-300 hover:scale-110 hover:shadow-lg"
           />
-        </div>
+        </div> */}
 
         {/* Right Side - Text */}
         <div className="md:w-full flex flex-col items-center md:items-start text-center md:text-left space-y-6">
@@ -31,9 +31,9 @@ Through keynote talks, technical sessions, paper presentations, and expert inter
           <p className="text-gray-600 text-justify">
             
           </p>
-          <p className="text-blue-800 font-bold text-justify text-lg">
+          {/* <p className="text-blue-800 font-bold text-justify text-lg">
             All accepted and presented papers will be published in Springer LNNS book series (Scopus Indexed)
-          </p>
+          </p> */}
         </div>
       </div>
 
