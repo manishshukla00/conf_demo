@@ -60,7 +60,7 @@ const Navbar = () => {
   const [mobileDropdown, setMobileDropdown] = useState(null);
 
   /* =======================================================
-     LOAD MODERN FONT — PLUS JAKARTA SANS
+     LOAD FONT
      ======================================================= */
 
   useEffect(() => {
@@ -79,12 +79,16 @@ const Navbar = () => {
   }, []);
 
   /* =======================================================
-     CLOSE MOBILE MENU ON DESKTOP
+     CLOSE MENU WHEN ENTERING DESKTOP
+     
+     IMPORTANT:
+     Desktop breakpoint is now 1024px (lg)
+     instead of 768px (md).
      ======================================================= */
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 768) {
+      if (window.innerWidth >= 1024) {
         setIsMenuOpen(false);
         setMobileDropdown(null);
       }
@@ -98,7 +102,7 @@ const Navbar = () => {
   }, []);
 
   /* =======================================================
-     LOCK BODY SCROLL WHEN MOBILE MENU IS OPEN
+     LOCK BODY SCROLL
      ======================================================= */
 
   useEffect(() => {
@@ -223,10 +227,11 @@ const Navbar = () => {
       flex
       items-center
       h-10
-      px-3.5
+      px-3
+      xl:px-3.5
       rounded-lg
-      text-[13.5px]
-      lg:text-[14px]
+      text-[13px]
+      xl:text-[14px]
       font-semibold
       tracking-[-0.015em]
       transition-all
@@ -255,13 +260,17 @@ const Navbar = () => {
           left-0
           right-0
           z-50
+
           h-[74px]
           sm:h-[80px]
           lg:h-[84px]
+
           bg-white/95
           backdrop-blur-xl
+
           border-b
           border-slate-200/80
+
           shadow-[0_4px_20px_rgba(15,23,42,0.06)]
         "
         style={{
@@ -274,146 +283,156 @@ const Navbar = () => {
             h-full
             max-w-[1440px]
             mx-auto
+
             px-4
             sm:px-6
             lg:px-8
             xl:px-10
+
             flex
             items-center
           "
           aria-label="Main navigation"
         >
           {/* =================================================
-              LOGO
-              
-              Desktop:
-              Fixed on the left and vertically centered.
+              UNIVERSITY BRANDING
 
-              Mobile:
-              Normal flex position so it stays beside
-              the hamburger menu.
+              Below 1024px:
+              Logo + university name + hamburger
+
+              1024px+:
+              Branding remains on left
               ================================================= */}
-
-          {/* =================================================
-    UNIVERSITY BRANDING
-    UU LOGO + UNITED UNIVERSITY WORDMARK
-    ================================================= */}
 
           <Link
             to="/"
             onClick={closeMobileMenu}
             className="
-    flex
-    items-center
-    shrink-0
-    group
-    focus:outline-none
+              flex
+              items-center
+              shrink-0
+              group
+              focus:outline-none
 
-    md:absolute
-    md:left-4
-    lg:left-8
-    xl:left-10
-    md:top-1/2
-    md:-translate-y-1/2
-    md:z-20
-  "
+              lg:absolute
+              lg:left-8
+              xl:left-10
+              lg:top-1/2
+              lg:-translate-y-1/2
+              lg:z-20
+            "
             aria-label="United University - ConCISE 2027"
           >
-            {/* UU LOGO */}
+            {/* =================================================
+                UU LOGO
+                ================================================= */}
 
             <div
               className="
-      relative
-      flex
-      items-center
-      justify-center
+                relative
+                flex
+                items-center
+                justify-center
+                shrink-0
 
-      w-[56px]
-      h-[56px]
+                w-[48px]
+                h-[48px]
 
-      sm:w-[62px]
-      sm:h-[62px]
+                sm:w-[54px]
+                sm:h-[54px]
 
-      md:w-[66px]
-      md:h-[66px]
+                md:w-[58px]
+                md:h-[58px]
 
-      lg:w-[70px]
-      lg:h-[70px]
+                lg:w-[66px]
+                lg:h-[66px]
 
-      rounded-full
-      bg-white
-      overflow-hidden
-      transition-all
-      duration-300
-      group-hover:scale-[1.03]
-      group-hover:shadow-lg
-      shadow-sm
-      ring-1
-      ring-slate-200
-      shrink-0
-    "
+                xl:w-[70px]
+                xl:h-[70px]
+
+                rounded-full
+                bg-white
+                overflow-hidden
+
+                transition-all
+                duration-300
+
+                group-hover:scale-[1.02]
+                group-hover:shadow-lg
+
+                shadow-sm
+                ring-1
+                ring-slate-200
+              "
             >
               <img
                 src="/images/uu_logo.jpeg"
                 alt="United University"
                 loading="eager"
                 className="
-        w-full
-        h-full
-        object-contain
-        p-0.5
-        block
-      "
+                  w-full
+                  h-full
+                  object-contain
+                  p-0.5
+                  block
+                "
               />
             </div>
 
             {/* =================================================
-      UNITED UNIVERSITY WORDMARK
-      ================================================= */}
+                UNITED UNIVERSITY WORDMARK
+
+                Responsive sizing so it NEVER overlaps
+                the mobile hamburger.
+                ================================================= */}
 
             <div
               className="
-      ml-3
-      sm:ml-3.5
-      md:ml-4
-      lg:ml-4.5
-      leading-none
-      whitespace-nowrap
-      hidden
-      sm:block
-    "
+                ml-2.5
+                sm:ml-3
+                md:ml-3.5
+                lg:ml-4
+
+                leading-none
+                whitespace-nowrap
+              "
             >
-              {/* UNITED UNIVERSITY */}
+              {/* UNIVERSITY NAME */}
 
               <div
                 className="
-        text-[13px]
-        sm:text-[14px]
-        md:text-[15px]
-        lg:text-[16px]
-        font-extrabold
-        tracking-[-0.03em]
-        uppercase
-      "
+                  text-[11px]
+                  sm:text-[12px]
+                  md:text-[13px]
+                  lg:text-[15px]
+                  xl:text-[16px]
+
+                  font-extrabold
+                  tracking-[-0.035em]
+                  uppercase
+                "
               >
                 <span className="text-[#123B72]">UNITED</span>
 
                 <span className="text-[#E52B2B] ml-1">UNIVERSITY</span>
               </div>
 
-              {/* PRAYAGRAJ */}
+              {/* LOCATION */}
 
               <div
                 className="
-        mt-1
-        text-[9px]
-        sm:text-[10px]
-        md:text-[10px]
-        font-semibold
-        tracking-[0.12em]
-        text-[#123B72]
-        uppercase
-      "
+                  mt-1
+
+                  text-[7px]
+                  sm:text-[8px]
+                  md:text-[9px]
+                  lg:text-[10px]
+
+                  font-semibold
+                  tracking-[0.13em]
+                  text-[#123B72]
+                  uppercase
+                "
               >
                 PRAYAGRAJ
               </div>
@@ -424,14 +443,16 @@ const Navbar = () => {
               DESKTOP NAVIGATION
 
               IMPORTANT:
-              This uses the COMPLETE available navbar width
-              and centers the menu independently of the logo.
+              lg = 1024px
+
+              Therefore at 873px the desktop menu DOES NOT
+              appear. The hamburger menu appears instead.
               ================================================= */}
 
           <div
             className="
               hidden
-              md:flex
+              lg:flex
               w-full
               items-center
               justify-center
@@ -442,10 +463,12 @@ const Navbar = () => {
                 flex
                 items-center
                 gap-0.5
-                lg:gap-1
+                xl:gap-1
               "
             >
-              {/* Home + About */}
+              {/* =================================================
+                  HOME + ABOUT
+                  ================================================= */}
 
               {mainLinks.map(({ to, label }) => (
                 <NavLink
@@ -472,15 +495,23 @@ const Navbar = () => {
                       flex
                       items-center
                       gap-1.5
+
                       h-10
-                      px-3.5
+
+                      px-3
+                      xl:px-3.5
+
                       rounded-lg
-                      text-[13.5px]
-                      lg:text-[14px]
+
+                      text-[13px]
+                      xl:text-[14px]
+
                       font-semibold
                       tracking-[-0.015em]
+
                       transition-all
                       duration-200
+
                       ${
                         openDropdown === key
                           ? "text-blue-700 bg-blue-50/80"
@@ -493,23 +524,30 @@ const Navbar = () => {
                     <ChevronIcon open={openDropdown === key} />
                   </button>
 
-                  {/* Dropdown panel */}
+                  {/* DROPDOWN */}
 
                   <div
                     className={`
                       absolute
                       top-[calc(100%+9px)]
                       left-0
+
                       w-[255px]
+
                       rounded-xl
+
                       bg-white
                       border
                       border-slate-200
+
                       shadow-[0_15px_45px_rgba(15,23,42,0.12)]
+
                       overflow-hidden
+
                       transition-all
                       duration-200
                       origin-top
+
                       ${
                         openDropdown === key
                           ? "opacity-100 scale-100 visible"
@@ -517,9 +555,15 @@ const Navbar = () => {
                       }
                     `}
                   >
-                    {/* Small top accent */}
-
-                    <div className="h-[3px] bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-400" />
+                    <div
+                      className="
+                        h-[3px]
+                        bg-gradient-to-r
+                        from-blue-600
+                        via-indigo-500
+                        to-cyan-400
+                      "
+                    />
 
                     <div className="py-2">
                       {links.map(({ to, label: dropdownLabel }) => (
@@ -528,39 +572,46 @@ const Navbar = () => {
                           to={to}
                           onClick={() => setOpenDropdown(null)}
                           className={({ isActive }) => `
-                            group
-                            flex
-                            items-center
-                            justify-between
-                            mx-2
-                            px-3.5
-                            py-3
-                            rounded-lg
-                            text-[13px]
-                            font-medium
-                            tracking-[-0.01em]
-                            transition-all
-                            duration-200
-                            ${
-                              isActive
-                                ? "bg-blue-50 text-blue-700"
-                                : "text-slate-600 hover:bg-slate-50 hover:text-blue-700"
-                            }
-                          `}
+                              group
+                              flex
+                              items-center
+                              justify-between
+
+                              mx-2
+                              px-3.5
+                              py-3
+
+                              rounded-lg
+
+                              text-[13px]
+                              font-medium
+
+                              transition-all
+                              duration-200
+
+                              ${
+                                isActive
+                                  ? "bg-blue-50 text-blue-700"
+                                  : "text-slate-600 hover:bg-slate-50 hover:text-blue-700"
+                              }
+                            `}
                         >
                           <span>{dropdownLabel}</span>
 
                           <svg
                             className="
-                              w-4
-                              h-4
-                              opacity-0
-                              -translate-x-1
-                              group-hover:opacity-100
-                              group-hover:translate-x-0
-                              transition-all
-                              duration-200
-                            "
+                                w-4
+                                h-4
+
+                                opacity-0
+                                -translate-x-1
+
+                                group-hover:opacity-100
+                                group-hover:translate-x-0
+
+                                transition-all
+                                duration-200
+                              "
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
@@ -589,15 +640,23 @@ const Navbar = () => {
                     relative
                     flex
                     items-center
+
                     h-10
-                    px-3.5
+
+                    px-3
+                    xl:px-3.5
+
                     rounded-lg
-                    text-[13.5px]
-                    lg:text-[14px]
+
+                    text-[13px]
+                    xl:text-[14px]
+
                     font-semibold
                     tracking-[-0.015em]
+
                     transition-all
                     duration-200
+
                     ${
                       to === "/registration"
                         ? isActive
@@ -616,10 +675,17 @@ const Navbar = () => {
           </div>
 
           {/* =================================================
-              MOBILE BUTTON
+              MOBILE / TABLET HAMBURGER
+
+              Visible below 1024px
               ================================================= */}
 
-          <div className="md:hidden ml-auto">
+          <div
+            className="
+              lg:hidden
+              ml-auto
+            "
+          >
             <button
               type="button"
               onClick={toggleMenu}
@@ -631,17 +697,24 @@ const Navbar = () => {
                 flex
                 items-center
                 justify-center
+
                 w-10
                 h-10
+
                 rounded-xl
+
                 text-slate-800
                 bg-slate-50
+
                 border
                 border-slate-200
+
                 hover:bg-blue-50
                 hover:text-blue-700
+
                 transition-all
                 duration-200
+
                 focus:outline-none
               "
             >
@@ -652,19 +725,23 @@ const Navbar = () => {
       </header>
 
       {/* =====================================================
-          MOBILE OVERLAY
+          MOBILE / TABLET OVERLAY
           ===================================================== */}
 
       <div
         className={`
-          md:hidden
+          lg:hidden
+
           fixed
           inset-0
           z-40
+
           bg-slate-950/30
           backdrop-blur-sm
+
           transition-all
           duration-300
+
           ${
             isMenuOpen
               ? "opacity-100 visible"
@@ -680,18 +757,27 @@ const Navbar = () => {
         <div
           className={`
             absolute
+
             top-[74px]
             sm:top-[80px]
+
             left-0
             right-0
+
             bg-white
+
             border-t
             border-slate-200
+
             shadow-[0_20px_50px_rgba(15,23,42,0.15)]
+
             max-h-[calc(100vh-74px)]
+
             overflow-y-auto
+
             transition-all
             duration-300
+
             ${
               isMenuOpen
                 ? "translate-y-0 opacity-100"
@@ -704,9 +790,18 @@ const Navbar = () => {
           }}
         >
           <div className="px-5 py-6">
-            {/* Conference information */}
+            {/* =================================================
+                CONFERENCE INFORMATION
+                ================================================= */}
 
-            <div className="mb-5 pb-4 border-b border-slate-100">
+            <div
+              className="
+                mb-5
+                pb-4
+                border-b
+                border-slate-100
+              "
+            >
               <p
                 className="
                   text-[10px]
@@ -732,7 +827,9 @@ const Navbar = () => {
             </div>
 
             <div className="space-y-1">
-              {/* Home + About */}
+              {/* =================================================
+                  HOME + ABOUT
+                  ================================================= */}
 
               {mainLinks.map(({ to, label }) => (
                 <NavLink
@@ -741,21 +838,26 @@ const Navbar = () => {
                   end={to === "/"}
                   onClick={closeMobileMenu}
                   className={({ isActive }) => `
-                    flex
-                    items-center
-                    h-12
-                    px-4
-                    rounded-xl
-                    text-[15px]
-                    font-semibold
-                    tracking-[-0.01em]
-                    transition-all
-                    ${
-                      isActive
-                        ? "bg-blue-50 text-blue-700"
-                        : "text-slate-700 hover:bg-slate-50 hover:text-blue-700"
-                    }
-                  `}
+                      flex
+                      items-center
+
+                      h-12
+
+                      px-4
+
+                      rounded-xl
+
+                      text-[15px]
+                      font-semibold
+
+                      transition-all
+
+                      ${
+                        isActive
+                          ? "bg-blue-50 text-blue-700"
+                          : "text-slate-700 hover:bg-slate-50 hover:text-blue-700"
+                      }
+                    `}
                 >
                   {label}
                 </NavLink>
@@ -771,23 +873,28 @@ const Navbar = () => {
                     type="button"
                     onClick={() => toggleMobileDropdown(key)}
                     className={`
-                      w-full
-                      flex
-                      items-center
-                      justify-between
-                      h-12
-                      px-4
-                      rounded-xl
-                      text-[15px]
-                      font-semibold
-                      tracking-[-0.01em]
-                      transition-all
-                      ${
-                        mobileDropdown === key
-                          ? "bg-blue-50 text-blue-700"
-                          : "text-slate-700 hover:bg-slate-50 hover:text-blue-700"
-                      }
-                    `}
+                        w-full
+                        flex
+                        items-center
+                        justify-between
+
+                        h-12
+
+                        px-4
+
+                        rounded-xl
+
+                        text-[15px]
+                        font-semibold
+
+                        transition-all
+
+                        ${
+                          mobileDropdown === key
+                            ? "bg-blue-50 text-blue-700"
+                            : "text-slate-700 hover:bg-slate-50 hover:text-blue-700"
+                        }
+                      `}
                   >
                     <span>{label}</span>
 
@@ -797,14 +904,17 @@ const Navbar = () => {
                   {mobileDropdown === key && (
                     <div
                       className="
-                        ml-4
-                        mt-1
-                        mb-2
-                        pl-3
-                        border-l-2
-                        border-blue-100
-                        space-y-1
-                      "
+                          ml-4
+                          mt-1
+                          mb-2
+
+                          pl-3
+
+                          border-l-2
+                          border-blue-100
+
+                          space-y-1
+                        "
                     >
                       {links.map(({ to, label: dropdownLabel }) => (
                         <NavLink
@@ -812,21 +922,26 @@ const Navbar = () => {
                           to={to}
                           onClick={closeMobileMenu}
                           className={({ isActive }) => `
-                            flex
-                            items-center
-                            min-h-[44px]
-                            px-3
-                            rounded-lg
-                            text-sm
-                            font-medium
-                            tracking-[-0.01em]
-                            transition-all
-                            ${
-                              isActive
-                                ? "text-blue-700 bg-blue-50"
-                                : "text-slate-600 hover:text-blue-700 hover:bg-slate-50"
-                            }
-                          `}
+                                flex
+                                items-center
+
+                                min-h-[44px]
+
+                                px-3
+
+                                rounded-lg
+
+                                text-sm
+                                font-medium
+
+                                transition-all
+
+                                ${
+                                  isActive
+                                    ? "text-blue-700 bg-blue-50"
+                                    : "text-slate-600 hover:text-blue-700 hover:bg-slate-50"
+                                }
+                              `}
                         >
                           {dropdownLabel}
                         </NavLink>
@@ -847,14 +962,20 @@ const Navbar = () => {
                   flex
                   items-center
                   justify-center
+
                   h-12
+
                   mt-3
+
                   px-5
+
                   rounded-xl
+
                   text-[14px]
                   font-bold
-                  tracking-[-0.01em]
+
                   transition-all
+
                   ${
                     isActive
                       ? "bg-blue-700 text-white"
@@ -875,14 +996,20 @@ const Navbar = () => {
                 className={({ isActive }) => `
                   flex
                   items-center
+
                   h-12
+
                   mt-1
+
                   px-4
+
                   rounded-xl
+
                   text-[15px]
                   font-semibold
-                  tracking-[-0.01em]
+
                   transition-all
+
                   ${
                     isActive
                       ? "bg-blue-50 text-blue-700"
