@@ -270,6 +270,7 @@ const Navbar = () => {
       >
         <nav
           className="
+            relative
             h-full
             max-w-[1440px]
             mx-auto
@@ -284,77 +285,166 @@ const Navbar = () => {
         >
           {/* =================================================
               LOGO
+              
+              Desktop:
+              Fixed on the left and vertically centered.
+
+              Mobile:
+              Normal flex position so it stays beside
+              the hamburger menu.
               ================================================= */}
+
+          {/* =================================================
+    UNIVERSITY BRANDING
+    UU LOGO + UNITED UNIVERSITY WORDMARK
+    ================================================= */}
 
           <Link
             to="/"
             onClick={closeMobileMenu}
             className="
-              flex
-              items-center
-              shrink-0
-              group
-              focus:outline-none
-            "
-            aria-label="ConCISE 2027 Home"
+    flex
+    items-center
+    shrink-0
+    group
+    focus:outline-none
+
+    md:absolute
+    md:left-4
+    lg:left-8
+    xl:left-10
+    md:top-1/2
+    md:-translate-y-1/2
+    md:z-20
+  "
+            aria-label="United University - ConCISE 2027"
           >
+            {/* UU LOGO */}
+
             <div
               className="
-                relative
-                flex
-                items-center
-                justify-center
-                w-[56px]
-                h-[56px]
-                sm:w-[62px]
-                sm:h-[62px]
-                md:w-[68px]
-                md:h-[68px]
-                lg:w-[72px]
-                lg:h-[72px]
-                rounded-full
-                bg-white
-                overflow-hidden
-                transition-all
-                duration-300
-                group-hover:scale-[1.03]
-                group-hover:shadow-lg
-                shadow-sm
-                ring-1
-                ring-slate-200
-              "
+      relative
+      flex
+      items-center
+      justify-center
+
+      w-[56px]
+      h-[56px]
+
+      sm:w-[62px]
+      sm:h-[62px]
+
+      md:w-[66px]
+      md:h-[66px]
+
+      lg:w-[70px]
+      lg:h-[70px]
+
+      rounded-full
+      bg-white
+      overflow-hidden
+      transition-all
+      duration-300
+      group-hover:scale-[1.03]
+      group-hover:shadow-lg
+      shadow-sm
+      ring-1
+      ring-slate-200
+      shrink-0
+    "
             >
-              {/* <img
-                src="/images/conf_logo.jpeg"
-                alt="ConCISE 2027 International Conference"
+              <img
+                src="/images/uu_logo.jpeg"
+                alt="United University"
                 loading="eager"
                 className="
-                  w-full
-                  h-full
-                  object-contain
-                  p-0.5
-                  block
-                "
-              /> */}
+        w-full
+        h-full
+        object-contain
+        p-0.5
+        block
+      "
+              />
+            </div>
+
+            {/* =================================================
+      UNITED UNIVERSITY WORDMARK
+      ================================================= */}
+
+            <div
+              className="
+      ml-3
+      sm:ml-3.5
+      md:ml-4
+      lg:ml-4.5
+      leading-none
+      whitespace-nowrap
+      hidden
+      sm:block
+    "
+            >
+              {/* UNITED UNIVERSITY */}
+
+              <div
+                className="
+        text-[13px]
+        sm:text-[14px]
+        md:text-[15px]
+        lg:text-[16px]
+        font-extrabold
+        tracking-[-0.03em]
+        uppercase
+      "
+              >
+                <span className="text-[#123B72]">UNITED</span>
+
+                <span className="text-[#E52B2B] ml-1">UNIVERSITY</span>
+              </div>
+
+              {/* PRAYAGRAJ */}
+
+              <div
+                className="
+        mt-1
+        text-[9px]
+        sm:text-[10px]
+        md:text-[10px]
+        font-semibold
+        tracking-[0.12em]
+        text-[#123B72]
+        uppercase
+      "
+              >
+                PRAYAGRAJ
+              </div>
             </div>
           </Link>
 
           {/* =================================================
               DESKTOP NAVIGATION
+
+              IMPORTANT:
+              This uses the COMPLETE available navbar width
+              and centers the menu independently of the logo.
               ================================================= */}
 
           <div
             className="
               hidden
               md:flex
-              flex-1
+              w-full
               items-center
               justify-center
-              ml-5
-              lg:ml-8
             "
           >
-            <div className="flex items-center gap-0.5 lg:gap-1">
+            <div
+              className="
+                flex
+                items-center
+                gap-0.5
+                lg:gap-1
+              "
+            >
               {/* Home + About */}
 
               {mainLinks.map(({ to, label }) => (
@@ -438,39 +528,39 @@ const Navbar = () => {
                           to={to}
                           onClick={() => setOpenDropdown(null)}
                           className={({ isActive }) => `
-                              group
-                              flex
-                              items-center
-                              justify-between
-                              mx-2
-                              px-3.5
-                              py-3
-                              rounded-lg
-                              text-[13px]
-                              font-medium
-                              tracking-[-0.01em]
-                              transition-all
-                              duration-200
-                              ${
-                                isActive
-                                  ? "bg-blue-50 text-blue-700"
-                                  : "text-slate-600 hover:bg-slate-50 hover:text-blue-700"
-                              }
-                            `}
+                            group
+                            flex
+                            items-center
+                            justify-between
+                            mx-2
+                            px-3.5
+                            py-3
+                            rounded-lg
+                            text-[13px]
+                            font-medium
+                            tracking-[-0.01em]
+                            transition-all
+                            duration-200
+                            ${
+                              isActive
+                                ? "bg-blue-50 text-blue-700"
+                                : "text-slate-600 hover:bg-slate-50 hover:text-blue-700"
+                            }
+                          `}
                         >
                           <span>{dropdownLabel}</span>
 
                           <svg
                             className="
-                                w-4
-                                h-4
-                                opacity-0
-                                -translate-x-1
-                                group-hover:opacity-100
-                                group-hover:translate-x-0
-                                transition-all
-                                duration-200
-                              "
+                              w-4
+                              h-4
+                              opacity-0
+                              -translate-x-1
+                              group-hover:opacity-100
+                              group-hover:translate-x-0
+                              transition-all
+                              duration-200
+                            "
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
@@ -681,23 +771,23 @@ const Navbar = () => {
                     type="button"
                     onClick={() => toggleMobileDropdown(key)}
                     className={`
-                        w-full
-                        flex
-                        items-center
-                        justify-between
-                        h-12
-                        px-4
-                        rounded-xl
-                        text-[15px]
-                        font-semibold
-                        tracking-[-0.01em]
-                        transition-all
-                        ${
-                          mobileDropdown === key
-                            ? "bg-blue-50 text-blue-700"
-                            : "text-slate-700 hover:bg-slate-50 hover:text-blue-700"
-                        }
-                      `}
+                      w-full
+                      flex
+                      items-center
+                      justify-between
+                      h-12
+                      px-4
+                      rounded-xl
+                      text-[15px]
+                      font-semibold
+                      tracking-[-0.01em]
+                      transition-all
+                      ${
+                        mobileDropdown === key
+                          ? "bg-blue-50 text-blue-700"
+                          : "text-slate-700 hover:bg-slate-50 hover:text-blue-700"
+                      }
+                    `}
                   >
                     <span>{label}</span>
 
@@ -707,14 +797,14 @@ const Navbar = () => {
                   {mobileDropdown === key && (
                     <div
                       className="
-                          ml-4
-                          mt-1
-                          mb-2
-                          pl-3
-                          border-l-2
-                          border-blue-100
-                          space-y-1
-                        "
+                        ml-4
+                        mt-1
+                        mb-2
+                        pl-3
+                        border-l-2
+                        border-blue-100
+                        space-y-1
+                      "
                     >
                       {links.map(({ to, label: dropdownLabel }) => (
                         <NavLink
@@ -722,21 +812,21 @@ const Navbar = () => {
                           to={to}
                           onClick={closeMobileMenu}
                           className={({ isActive }) => `
-                                flex
-                                items-center
-                                min-h-[44px]
-                                px-3
-                                rounded-lg
-                                text-sm
-                                font-medium
-                                tracking-[-0.01em]
-                                transition-all
-                                ${
-                                  isActive
-                                    ? "text-blue-700 bg-blue-50"
-                                    : "text-slate-600 hover:text-blue-700 hover:bg-slate-50"
-                                }
-                              `}
+                            flex
+                            items-center
+                            min-h-[44px]
+                            px-3
+                            rounded-lg
+                            text-sm
+                            font-medium
+                            tracking-[-0.01em]
+                            transition-all
+                            ${
+                              isActive
+                                ? "text-blue-700 bg-blue-50"
+                                : "text-slate-600 hover:text-blue-700 hover:bg-slate-50"
+                            }
+                          `}
                         >
                           {dropdownLabel}
                         </NavLink>
